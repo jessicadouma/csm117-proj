@@ -32,13 +32,17 @@ class TradingGame(LineReceiver):
         self.sendLine("OUTPUT:Welcome, %s!" % (name,))
         self.name = name
 
+        # Send each newly connected team their list of items
+        itemMsg = "ITEMS:" + self.tb.itemList(self.tb.numTeams - 1)
+        self.sendLine(itemMsg)
+
         if self.tb.allTeamsConnected():
             self.state = "TRANSACTION"
 
-            msg = "ROUNDSTART:" + str(self.tb.currentRound+1) + "," + str(self.tb.roundTime)
-
+            allConnectedMsg = "ROUNDSTART:" + str(self.tb.currentRound+1) + "," + str(self.tb.roundTime)
+            
             for (name, team) in self.tb.teams.iteritems():
-                team.sendLine(msg)
+                team.sendLine(allConnectedMsg)
 
     def handle_TRANSACTION(self, msg):
         data = msg.split(':')

@@ -1,3 +1,5 @@
+import tradingutils as tutils
+
 class TradingBrain:
     def __init__(self, maxTeams, maxRounds):
         self.numTeams = 0
@@ -6,6 +8,8 @@ class TradingBrain:
 
         self.purses = {}
         self.scoreBoard = {}
+
+        self.items = tutils.build_itemlist()
 
         self.maxRounds = maxRounds
         self.currentRound = 0
@@ -29,6 +33,9 @@ class TradingBrain:
             del self.scoreBoard[name]
 
             self.numTeams -= 1
+
+    def itemList(self, teamidx):
+        return self.items[teamidx]
 
     def allTeamsConnected(self):
         return self.numTeams == self.maxTeams

@@ -2,7 +2,7 @@ from twisted.internet.protocol import Factory
 from twisted.protocols.basic   import LineReceiver
 from twisted.internet          import reactor
 
-from trading_game import TradingBrain
+from tradingBrain import TradingBrain
 
 class TradingGame(LineReceiver):
     def __init__(self, tradingBrain):
@@ -11,7 +11,7 @@ class TradingGame(LineReceiver):
         self.state = "GETNAME"
 
     def connectionMade(self):
-        self.sendLine("Choose a team name.")
+        self.sendLine("OUTPUT:Choose a team name.")
 
     def connectionLost(self, reason):
         self.tb.removeTeam(self.name)
@@ -19,28 +19,37 @@ class TradingGame(LineReceiver):
     def lineReceived(self, line):
         if self.state == "GETNAME":
             self.handle_GETNAME(line)
-        elif self.state == "TRADE":
-            self.handle_TRADE(line)
-        elif self.state == "ROUNDSTART":
-            self.handle_ROUNDSTART(line)
+        elif self.state == "TRANSACTION":
+            self.handle_TRANSACTION(line)
+        elif self.state == "ROUNDEND":
+            self.handle_ROUNDEND(line)
 
-    def handle_GETNAME(self, name):
+    def handle_GETNAME(self, name): 
         if self.tb.addTeam(name, self) is False:
-            self.sendLine("Name taken, please choose another.")
+            self.sendLine("OUTPUT:Name taken, please choose another.")
             return
         
-        self.sendLine("Welcome, %s!" % (name,))
+        self.sendLine("OUTPUT:Welcome, %s!" % (name,))
         self.name = name
 
         if self.tb.allTeamsConnected():
-            self.state = "ROUNDSTART"
+            self.state = "TRANSACTION"
+
+            msg = "ROUNDSTART:" + str(self.tb.currentRound+1) + "," + str(self.tb.roundTime)
 
             for (name, team) in self.tb.teams.iteritems():
-                team.sendLine(self.state)
+                team.sendLine(msg)
+
+    def handle_TRANSACTION(self, msg):
+        data = msg.split(':')
+
+        event = data[0]
 
 class TradingGameFactory(Factory):
     def __init__(self):
-        self.tb = TradingBrain()
+        maxTeams = 2
+        maxRounds = 4
+        self.tb = TradingBrain(maxTeams, maxRounds)
 
     def buildProtocol(self, addr):
         return TradingGame(self.tb)

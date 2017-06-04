@@ -19,8 +19,8 @@ class TradingGame(LineReceiver):
     def lineReceived(self, line):
         if self.state == "GETNAME":
             self.handle_GETNAME(line)
-        elif self.state == "TRANSACTION":
-            self.handle_TRANSACTION(line)
+        elif self.state == "ROUNDSTART":
+            self.handle_ROUNDSTART(line)
         elif self.state == "ROUNDEND":
             self.handle_ROUNDEND(line)
 
@@ -37,14 +37,14 @@ class TradingGame(LineReceiver):
         self.sendLine(itemMsg)
 
         if self.tb.allTeamsConnected():
-            self.state = "TRANSACTION"
+            self.state = "ROUNDSTART"
 
             allConnectedMsg = "ROUNDSTART:" + str(self.tb.currentRound+1) + "," + str(self.tb.roundTime)
             
             for (name, team) in self.tb.teams.iteritems():
                 team.sendLine(allConnectedMsg)
 
-    def handle_TRANSACTION(self, msg):
+    def handle_ROUNDSTART(self, msg):
         data = msg.split(':')
 
         event = data[0]

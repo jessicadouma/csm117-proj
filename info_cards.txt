@@ -1,36 +1,36 @@
-Clue #1: A bonus of $5 will be paid for every white chip a team has at the end of the second quarter.
-Clue #2: A bonus of $5 will be paid for every blue chip a team has at the end of the third quarter.
-Clue #3: A bonus 5$ will be paid for every red chip a team has at the end of the first quarter.
-Clue #4: White chips represent power.
-Clue #5: Onyx is not equal to blue chips.
-Clue #6: Red chips represent power.
-Clue #7: Pearls are different than blue chips.
-Clue #8: White chips represent power.
-Clue #9: Pearls represent prestige.
-Clue #10: At the end of the game, Team 1 will receive an extra $5 for every red chip they have.
-Clue #11: At the end of the game, Team 4 will receive an extra $5 for every red chip they have.
-Clue #12: At the end of the game, Team 7 will receive an extra $5 for every red chip they have.
-Clue #13: At the end of the game, Team 5 will receive an extra $5 for every red chip they have.
-Clue #14: At the end of the game, Team 2 will receive an extra $5 for every white chip they have.
-Clue #15: At the end of the game, Team 5 will receive an extra $10 for every white chip they have.
-Clue #16: At the end of the game, Team 8 will receive an extra $10 for every white chip they have.
-Clue #17: At the end of the game, Team 11 will receive an extra $10 for every white chip they have.
-Clue #18: At the end of the game, Team 3 will receive an extra $10 for every blue chip they have.
-Clue #19: At the end of the game, Team 6 will receive an extra $10 for every blue chip they have.
-Clue #20: At the end of the game, Team 9 will receive an extra $10 for every blue chip they have.
-Clue #21: At the end of the game, Team 12 will receive an extra $10 for every blue chip they have.
-Clue #22: If a team has no gems at the end of the game, they will receive a $200 bonus.
-Clue #23: If a team has over $200 cash at the end of the game, they will receive a $100 bonus.
-Clue #24: If a team does not have at least one poker chip of each color at the end of the game, they will be penalized $200.
-Clue #25: Red chips are worth $1 when the game begins.
-Clue #26: White chips are worth $2 when the game begins.
-Clue #27: Blue chips are worth $5 when the game begins.
-Clue #28: Onyx are worth $5 when the game begins.
-Clue #29: Pearls are worth $10 when the game begins.
-Clue #30: Emeralds are worth $25 when the game begins.
-Clue #31: Red chips are worth $10 when the game ends.
-Clue #32: White chips are worth $5 more when the game ends.
-Clue #33: Blue chips are worth $1 when the game ends.
-Clue #34: Onyx is worth $15 when the game ends.
-Clue #35: Pearls are worth $5 when the game ends.
-Clue #36: Emeralds are worth #10 when the game ends.
+Clue #1 - A bonus of $5 will be paid for every white chip a team has at the end of the second quarter.
+Clue #2 - A bonus of $5 will be paid for every blue chip a team has at the end of the third quarter.
+Clue #3 - A bonus 5$ will be paid for every red chip a team has at the end of the first quarter.
+Clue #4 - White chips represent power.
+Clue #5 - Onyx is not equal to blue chips.
+Clue #6 - Red chips represent power.
+Clue #7 - Pearls are different than blue chips.
+Clue #8 - White chips represent power.
+Clue #9 - Pearls represent prestige.
+Clue #10 - At the end of the game, Team 1 will receive an extra $5 for every red chip they have.
+Clue #11 - At the end of the game, Team 4 will receive an extra $5 for every red chip they have.
+Clue #12 - At the end of the game, Team 7 will receive an extra $5 for every red chip they have.
+Clue #13 - At the end of the game, Team 5 will receive an extra $5 for every red chip they have.
+Clue #14 - At the end of the game, Team 2 will receive an extra $5 for every white chip they have.
+Clue #15 - At the end of the game, Team 5 will receive an extra $10 for every white chip they have.
+Clue #16 - At the end of the game, Team 8 will receive an extra $10 for every white chip they have.
+Clue #17 - At the end of the game, Team 11 will receive an extra $10 for every white chip they have.
+Clue #18 - At the end of the game, Team 3 will receive an extra $10 for every blue chip they have.
+Clue #19 - At the end of the game, Team 6 will receive an extra $10 for every blue chip they have.
+Clue #20 - At the end of the game, Team 9 will receive an extra $10 for every blue chip they have.
+Clue #21 - At the end of the game, Team 12 will receive an extra $10 for every blue chip they have.
+Clue #22 - If a team has no gems at the end of the game, they will receive a $200 bonus.
+Clue #23 - If a team has over $200 cash at the end of the game, they will receive a $100 bonus.
+Clue #24 - If a team does not have at least one poker chip of each color at the end of the game, they will be penalized $200.
+Clue #25 - Red chips are worth $1 when the game begins.
+Clue #26 - White chips are worth $2 when the game begins.
+Clue #27 - Blue chips are worth $5 when the game begins.
+Clue #28 - Onyx are worth $5 when the game begins.
+Clue #29 - Pearls are worth $10 when the game begins.
+Clue #30 - Emeralds are worth $25 when the game begins.
+Clue #31 - Red chips are worth $10 when the game ends.
+Clue #32 - White chips are worth $5 more when the game ends.
+Clue #33 - Blue chips are worth $1 when the game ends.
+Clue #34 - Onyx is worth $15 when the game ends.
+Clue #35 - Pearls are worth $5 when the game ends.
+Clue #36 - Emeralds are worth #10 when the game ends.

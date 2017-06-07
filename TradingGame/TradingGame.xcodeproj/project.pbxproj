@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1046DD92437AD73D66813172 /* Pods_TradingGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41E9678054D55CF3EB21712 /* Pods_TradingGame.framework */; };
+		A825462A354FF34A1185D81A /* Pods_TradingGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85AD3692A06AD76C036A8AF0 /* Pods_TradingGameTests.framework */; };
+		AE73F7E91EE8944D00F41371 /* ClientTradingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73F7E81EE8944D00F41371 /* ClientTradingGame.swift */; };
 		E886B4971EE7DD64000F1946 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E886B4961EE7DD64000F1946 /* MyTabBarController.swift */; };
 		E8B4BE681EE7692500E8680E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B4BE671EE7692500E8680E /* AppDelegate.swift */; };
 		E8B4BE6A1EE7692500E8680E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B4BE691EE7692500E8680E /* ViewController.swift */; };
@@ -18,9 +21,12 @@
 		E8B4BE961EE7B70300E8680E /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B4BE951EE7B70300E8680E /* LobbyViewController.swift */; };
 		E8B4BE981EE7C35900E8680E /* Instruction1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B4BE971EE7C35900E8680E /* Instruction1ViewController.swift */; };
 		E8B4BE9A1EE7CD8900E8680E /* Instruction2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B4BE991EE7CD8900E8680E /* Instruction2ViewController.swift */; };
+		F627DF18F3CFE4F49D866176 /* Pods_TradingGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836C5AA7C015235987095DE9 /* Pods_TradingGameUITests.framework */; };
 		E8D0E70E1EE888A400FE5270 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0E70D1EE888A400FE5270 /* TransactionsTableViewController.swift */; };
+
 		E8D0E7101EE8B2B800FE5270 /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0E70F1EE8B2B800FE5270 /* ItemsTableViewController.swift */; };
 		E8D0E7121EE8B32E00FE5270 /* CluesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0E7111EE8B32E00FE5270 /* CluesTableViewController.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		836C5AA7C015235987095DE9 /* Pods_TradingGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TradingGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85AD3692A06AD76C036A8AF0 /* Pods_TradingGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TradingGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9722A3CF394296C0969D86A2 /* Pods-TradingGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradingGameUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradingGameUITests/Pods-TradingGameUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AE73F7E81EE8944D00F41371 /* ClientTradingGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTradingGame.swift; sourceTree = "<group>"; };
+		B38A5F72BE98B6696598974F /* Pods-TradingGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradingGameTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TradingGameTests/Pods-TradingGameTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C8784CECC928F78A7BAD4AF8 /* Pods-TradingGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradingGameTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradingGameTests/Pods-TradingGameTests.release.xcconfig"; sourceTree = "<group>"; };
+		CFB82D46F5D07CF65374A8AF /* Pods-TradingGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradingGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TradingGame/Pods-TradingGame.debug.xcconfig"; sourceTree = "<group>"; };
+		D41E9678054D55CF3EB21712 /* Pods_TradingGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TradingGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D59EEFC8BAF9E0F5F516B40B /* Pods-TradingGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradingGameUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TradingGameUITests/Pods-TradingGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E886B4961EE7DD64000F1946 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTabBarController.swift; path = ../MyTabBarController.swift; sourceTree = "<group>"; };
 		E8B4BE641EE7692400E8680E /* TradingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B4BE671EE7692500E8680E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,9 +73,13 @@
 		E8B4BE951EE7B70300E8680E /* LobbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 		E8B4BE971EE7C35900E8680E /* Instruction1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instruction1ViewController.swift; sourceTree = "<group>"; };
 		E8B4BE991EE7CD8900E8680E /* Instruction2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instruction2ViewController.swift; sourceTree = "<group>"; };
+		FBD321E937DC822F6C7629B9 /* Pods-TradingGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradingGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradingGame/Pods-TradingGame.release.xcconfig"; sourceTree = "<group>"; };
+
 		E8D0E70D1EE888A400FE5270 /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
+
 		E8D0E70F1EE8B2B800FE5270 /* ItemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
 		E8D0E7111EE8B32E00FE5270 /* CluesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CluesTableViewController.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1046DD92437AD73D66813172 /* Pods_TradingGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A825462A354FF34A1185D81A /* Pods_TradingGameTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +103,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F627DF18F3CFE4F49D866176 /* Pods_TradingGameUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6BBF4B3C90F2E4A7BECB7D59 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFB82D46F5D07CF65374A8AF /* Pods-TradingGame.debug.xcconfig */,
+				FBD321E937DC822F6C7629B9 /* Pods-TradingGame.release.xcconfig */,
+				B38A5F72BE98B6696598974F /* Pods-TradingGameTests.debug.xcconfig */,
+				C8784CECC928F78A7BAD4AF8 /* Pods-TradingGameTests.release.xcconfig */,
+				D59EEFC8BAF9E0F5F516B40B /* Pods-TradingGameUITests.debug.xcconfig */,
+				9722A3CF394296C0969D86A2 /* Pods-TradingGameUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E8B4BE5B1EE7692400E8680E = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +130,8 @@
 				E8B4BE7B1EE7692500E8680E /* TradingGameTests */,
 				E8B4BE861EE7692500E8680E /* TradingGameUITests */,
 				E8B4BE651EE7692400E8680E /* Products */,
+				6BBF4B3C90F2E4A7BECB7D59 /* Pods */,
+				FDBE0C32B77A0E0D9A425972 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +161,7 @@
 				E8B4BE6E1EE7692500E8680E /* Assets.xcassets */,
 				E8B4BE701EE7692500E8680E /* LaunchScreen.storyboard */,
 				E8B4BE731EE7692500E8680E /* Info.plist */,
+				AE73F7E81EE8944D00F41371 /* ClientTradingGame.swift */,
 			);
 			path = TradingGame;
 			sourceTree = "<group>";
@@ -146,6 +184,16 @@
 			path = TradingGameUITests;
 			sourceTree = "<group>";
 		};
+		FDBE0C32B77A0E0D9A425972 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D41E9678054D55CF3EB21712 /* Pods_TradingGame.framework */,
+				85AD3692A06AD76C036A8AF0 /* Pods_TradingGameTests.framework */,
+				836C5AA7C015235987095DE9 /* Pods_TradingGameUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8B4BE8C1EE7692500E8680E /* Build configuration list for PBXNativeTarget "TradingGame" */;
 			buildPhases = (
+				426E9FB84AF14268CFA1C2C1 /* [CP] Check Pods Manifest.lock */,
 				E8B4BE601EE7692400E8680E /* Sources */,
 				E8B4BE611EE7692400E8680E /* Frameworks */,
 				E8B4BE621EE7692400E8680E /* Resources */,
+				500BB58574752494BA6271EC /* [CP] Embed Pods Frameworks */,
+				0D9CC1D2404A6159CD3C1D50 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8B4BE8F1EE7692500E8680E /* Build configuration list for PBXNativeTarget "TradingGameTests" */;
 			buildPhases = (
+				A1B7DD03E5DE840FCB3252B6 /* [CP] Check Pods Manifest.lock */,
 				E8B4BE741EE7692500E8680E /* Sources */,
 				E8B4BE751EE7692500E8680E /* Frameworks */,
 				E8B4BE761EE7692500E8680E /* Resources */,
+				1114CF1BE28E73E2C65EE189 /* [CP] Embed Pods Frameworks */,
+				12CD9F5DC6847417AEAAB7CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8B4BE921EE7692500E8680E /* Build configuration list for PBXNativeTarget "TradingGameUITests" */;
 			buildPhases = (
+				042989D20A1FD20E92B781B1 /* [CP] Check Pods Manifest.lock */,
 				E8B4BE7F1EE7692500E8680E /* Sources */,
 				E8B4BE801EE7692500E8680E /* Frameworks */,
 				E8B4BE811EE7692500E8680E /* Resources */,
+				2851AD8DD684BD96744E0746 /* [CP] Embed Pods Frameworks */,
+				136CD3FA3B49F0FCB4AE4615 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -275,6 +332,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		042989D20A1FD20E92B781B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0D9CC1D2404A6159CD3C1D50 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TradingGame/Pods-TradingGame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1114CF1BE28E73E2C65EE189 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TradingGameTests/Pods-TradingGameTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12CD9F5DC6847417AEAAB7CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TradingGameTests/Pods-TradingGameTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		136CD3FA3B49F0FCB4AE4615 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TradingGameUITests/Pods-TradingGameUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2851AD8DD684BD96744E0746 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TradingGameUITests/Pods-TradingGameUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		426E9FB84AF14268CFA1C2C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		500BB58574752494BA6271EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TradingGame/Pods-TradingGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1B7DD03E5DE840FCB3252B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E8B4BE601EE7692400E8680E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -289,6 +484,7 @@
 				E8D0E7121EE8B32E00FE5270 /* CluesTableViewController.swift in Sources */,
 				E8D0E70E1EE888A400FE5270 /* TransactionsTableViewController.swift in Sources */,
 				E886B4971EE7DD64000F1946 /* MyTabBarController.swift in Sources */,
+				AE73F7E91EE8944D00F41371 /* ClientTradingGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +634,7 @@
 		};
 		E8B4BE8D1EE7692500E8680E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB82D46F5D07CF65374A8AF /* Pods-TradingGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TradingGame/Info.plist;
@@ -450,6 +647,7 @@
 		};
 		E8B4BE8E1EE7692500E8680E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBD321E937DC822F6C7629B9 /* Pods-TradingGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TradingGame/Info.plist;
@@ -462,6 +660,7 @@
 		};
 		E8B4BE901EE7692500E8680E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B38A5F72BE98B6696598974F /* Pods-TradingGameTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -476,6 +675,7 @@
 		};
 		E8B4BE911EE7692500E8680E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8784CECC928F78A7BAD4AF8 /* Pods-TradingGameTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +690,7 @@
 		};
 		E8B4BE931EE7692500E8680E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D59EEFC8BAF9E0F5F516B40B /* Pods-TradingGameUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = TradingGameUITests/Info.plist;
@@ -503,6 +704,7 @@
 		};
 		E8B4BE941EE7692500E8680E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9722A3CF394296C0969D86A2 /* Pods-TradingGameUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = TradingGameUITests/Info.plist;

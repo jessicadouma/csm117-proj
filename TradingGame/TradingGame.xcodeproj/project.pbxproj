@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E886B4971EE7DD64000F1946 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E886B4961EE7DD64000F1946 /* MyTabBarController.swift */; };
 		E8B4BE681EE7692500E8680E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B4BE671EE7692500E8680E /* AppDelegate.swift */; };
 		E8B4BE6A1EE7692500E8680E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B4BE691EE7692500E8680E /* ViewController.swift */; };
 		E8B4BE6D1EE7692500E8680E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B4BE6B1EE7692500E8680E /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E886B4961EE7DD64000F1946 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTabBarController.swift; path = ../MyTabBarController.swift; sourceTree = "<group>"; };
 		E8B4BE641EE7692400E8680E /* TradingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B4BE671EE7692500E8680E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B4BE691EE7692500E8680E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		E8B4BE661EE7692400E8680E /* TradingGame */ = {
 			isa = PBXGroup;
 			children = (
+				E886B4961EE7DD64000F1946 /* MyTabBarController.swift */,
 				E8B4BE671EE7692500E8680E /* AppDelegate.swift */,
 				E8B4BE691EE7692500E8680E /* ViewController.swift */,
 				E8B4BE6B1EE7692500E8680E /* Main.storyboard */,
@@ -273,6 +276,7 @@
 				E8B4BE981EE7C35900E8680E /* Instruction1ViewController.swift in Sources */,
 				E8B4BE9A1EE7CD8900E8680E /* Instruction2ViewController.swift in Sources */,
 				E8B4BE681EE7692500E8680E /* AppDelegate.swift in Sources */,
+				E886B4971EE7DD64000F1946 /* MyTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +521,7 @@
 				E8B4BE8E1EE7692500E8680E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8B4BE8F1EE7692500E8680E /* Build configuration list for PBXNativeTarget "TradingGameTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +530,7 @@
 				E8B4BE911EE7692500E8680E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8B4BE921EE7692500E8680E /* Build configuration list for PBXNativeTarget "TradingGameUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +539,7 @@
 				E8B4BE941EE7692500E8680E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

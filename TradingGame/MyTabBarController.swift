@@ -1,17 +1,14 @@
 //
-//  Instruction2ViewController.swift
+//  MyTabBarController.swift
 //  TradingGame
 //
-//  Created by Jessica Douma on 6/6/17.
+//  Created by Jessica Douma on 6/7/17.
 //  Copyright © 2017 Jessica Douma. All rights reserved.
 //
 
 import UIKit
 
-class Instruction2ViewController: UIViewController {
-    
-    var hostName: String!
-    var teamName: String!
+class MyTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,14 +20,8 @@ class Instruction2ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func readyToPlay(_ sender: Any) {
-        let mainST = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let vc = mainST.instantiateViewController(withIdentifier: "myTabBar")
-        present(vc, animated: true, completion: nil)
-        
-    }
     
+
     /*
     // MARK: - Navigation
 

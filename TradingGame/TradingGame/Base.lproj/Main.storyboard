@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TradingGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4h-ex-Ge8">
+                                <rect key="frame" x="16" y="308" width="53" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="5Uo-a1-LyL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
+                                <color key="textColor" red="0.02150115929543972" green="0.27774721384048462" blue="0.34059828519821167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter hostname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9hR-hb-JKV">
+                                <rect key="frame" x="80" y="308" width="278" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="enteredHost:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="JMU-kE-86E"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sda-W4-4pK"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJm-3T-paf">
+                                <rect key="frame" x="16" y="362" width="55" height="30"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
+                                <color key="textColor" red="0.02150115929543972" green="0.27774721384048462" blue="0.34059828519821167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter team name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZRw-bK-dbR">
+                                <rect key="frame" x="80" y="362" width="278" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="enteredTeam:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="PBq-n7-NjA"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LFQ-ad-amn"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="the trading game-4" translatesAutoresizingMaskIntoConstraints="NO" id="uPT-ZQ-SZM">
+                                <rect key="frame" x="16" y="128" width="343" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="68X-SZ-1qi"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oo6-PG-CLl">
+                                <rect key="frame" x="124" y="449" width="128" height="40"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="24"/>
+                                <state key="normal" title="Join Game!">
+                                    <color key="titleColor" red="0.9414018988609314" green="0.50865155458450317" blue="0.4050082266330719" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.41004635267781375" blue="0.28160686381686173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1MU-qj-DTD" kind="show" identifier="joinGameSegue" id="xyp-Tf-zLl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98055273294448853" green="0.97293764352798462" blue="0.95191293954849243" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZRw-bK-dbR" firstAttribute="trailing" secondItem="9hR-hb-JKV" secondAttribute="trailing" id="0C5-dt-oRO"/>
+                            <constraint firstItem="uPT-ZQ-SZM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0uN-C6-Fmt"/>
+                            <constraint firstItem="9hR-hb-JKV" firstAttribute="leading" secondItem="U4h-ex-Ge8" secondAttribute="trailing" constant="11" id="2UV-eB-5zB"/>
+                            <constraint firstItem="9hR-hb-JKV" firstAttribute="top" secondItem="U4h-ex-Ge8" secondAttribute="top" id="6Ds-H5-alD"/>
+                            <constraint firstItem="9hR-hb-JKV" firstAttribute="top" secondItem="uPT-ZQ-SZM" secondAttribute="bottom" constant="52" id="7Jj-sf-1JE"/>
+                            <constraint firstItem="rJm-3T-paf" firstAttribute="leading" secondItem="uPT-ZQ-SZM" secondAttribute="leading" id="BCb-5W-YaY"/>
+                            <constraint firstItem="Oo6-PG-CLl" firstAttribute="top" secondItem="ZRw-bK-dbR" secondAttribute="bottom" constant="57" id="Pnv-Ql-Ghy"/>
+                            <constraint firstItem="rJm-3T-paf" firstAttribute="leading" secondItem="U4h-ex-Ge8" secondAttribute="leading" id="Rde-3c-BHR"/>
+                            <constraint firstItem="uPT-ZQ-SZM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="108" id="TbH-mE-pNM"/>
+                            <constraint firstItem="Oo6-PG-CLl" firstAttribute="centerX" secondItem="uPT-ZQ-SZM" secondAttribute="centerX" id="YTp-Nl-wsR"/>
+                            <constraint firstItem="ZRw-bK-dbR" firstAttribute="leading" secondItem="9hR-hb-JKV" secondAttribute="leading" id="ZR5-Lw-pib"/>
+                            <constraint firstItem="ZRw-bK-dbR" firstAttribute="bottom" secondItem="rJm-3T-paf" secondAttribute="bottom" id="o7z-uV-zz8"/>
+                            <constraint firstItem="rJm-3T-paf" firstAttribute="top" secondItem="U4h-ex-Ge8" secondAttribute="bottom" constant="24" id="oAW-JU-8A8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZRw-bK-dbR" secondAttribute="trailing" constant="1" id="rIZ-hH-Zk9"/>
+                            <constraint firstItem="ZRw-bK-dbR" firstAttribute="top" secondItem="rJm-3T-paf" secondAttribute="top" id="s0j-5X-vyR"/>
+                            <constraint firstItem="uPT-ZQ-SZM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="seD-1s-a8s"/>
+                            <constraint firstItem="9hR-hb-JKV" firstAttribute="bottom" secondItem="U4h-ex-Ge8" secondAttribute="bottom" id="yl2-nl-aON"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hostField" destination="9hR-hb-JKV" id="I9Q-pf-4y5"/>
+                        <outlet property="teamField" destination="ZRw-bK-dbR" id="d2I-3B-u8b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+        <!--Lobby View Controller-->
+        <scene sceneID="mI0-A2-lz4">
+            <objects>
+                <viewController id="1MU-qj-DTD" customClass="LobbyViewController" customModule="TradingGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kKq-I9-4cv"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Tn-VB-BO6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YNa-CD-K7z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Waiting" translatesAutoresizingMaskIntoConstraints="NO" id="rld-lF-axs">
+                                <rect key="frame" x="0.0" y="217" width="375" height="233"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76012963056564331" green="0.34694641828536987" blue="0.28940388560295105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rld-lF-axs" firstAttribute="top" secondItem="kKq-I9-4cv" secondAttribute="bottom" constant="197" id="1TA-9t-H2v"/>
+                            <constraint firstItem="rld-lF-axs" firstAttribute="leading" secondItem="YNa-CD-K7z" secondAttribute="leading" id="P5u-kJ-eVN"/>
+                            <constraint firstAttribute="trailing" secondItem="rld-lF-axs" secondAttribute="trailing" id="VRJ-I6-ghN"/>
+                            <constraint firstItem="rld-lF-axs" firstAttribute="centerY" secondItem="YNa-CD-K7z" secondAttribute="centerY" id="n3M-5K-AB0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="cju-QQ-UKt" kind="show" identifier="instructionSegue" id="lOP-li-WEL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JRf-uH-q0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="38"/>
+        </scene>
+        <!--Instruction1 View Controller-->
+        <scene sceneID="uFa-AF-X1v">
+            <objects>
+                <viewController id="cju-QQ-UKt" customClass="Instruction1ViewController" customModule="TradingGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8mG-Bb-rph"/>
+                        <viewControllerLayoutGuide type="bottom" id="e58-ag-7sh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PsK-8U-vFZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWZ-Yd-BHS">
+                                <rect key="frame" x="32" y="109" width="310" height="371"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="371" id="eZf-XX-pGU"/>
+                                </constraints>
+                                <string key="text">There will be four rounds of trading  The rounds will be of equal, undisclosed length  When a round ends, all trading and conversation amongst teams must stop  You will be notified at the start and end of each round with a notification</string>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
+                                <color key="textColor" red="0.9414018988609314" green="0.50865155458450317" blue="0.4050082266330719" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZn-WV-fDU">
+                                <rect key="frame" x="160" y="517" width="55" height="42"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="25"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.017373507842421532" green="0.27774998545646667" blue="0.34060466289520264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3zU-07-S7Y" kind="show" identifier="instruction2Segue" id="eYp-WJ-ChB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64v-3s-yql">
+                                <rect key="frame" x="114" y="51" width="147" height="30"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="25"/>
+                                <color key="textColor" red="0.017373507842421532" green="0.27774998545646667" blue="0.34060466289520264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98055273294448853" green="0.97293764352798462" blue="0.95191293954849243" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hWZ-Yd-BHS" firstAttribute="centerX" secondItem="PZn-WV-fDU" secondAttribute="centerX" id="49x-e5-WT0"/>
+                            <constraint firstItem="64v-3s-yql" firstAttribute="centerX" secondItem="hWZ-Yd-BHS" secondAttribute="centerX" id="CuB-fA-pUK"/>
+                            <constraint firstItem="64v-3s-yql" firstAttribute="top" secondItem="8mG-Bb-rph" secondAttribute="bottom" constant="31" id="CwQ-Tj-4Ec"/>
+                            <constraint firstItem="hWZ-Yd-BHS" firstAttribute="leading" secondItem="PsK-8U-vFZ" secondAttribute="leadingMargin" constant="16" id="Lc7-I5-ShM"/>
+                            <constraint firstItem="hWZ-Yd-BHS" firstAttribute="centerX" secondItem="PsK-8U-vFZ" secondAttribute="centerX" id="TBY-7K-jnO"/>
+                            <constraint firstItem="hWZ-Yd-BHS" firstAttribute="top" secondItem="64v-3s-yql" secondAttribute="bottom" constant="28" id="gYT-Sr-Smb"/>
+                            <constraint firstItem="PZn-WV-fDU" firstAttribute="top" secondItem="hWZ-Yd-BHS" secondAttribute="bottom" constant="37" id="jQr-ZO-nAd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PLx-Dt-3Jm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="36.431784107946029"/>
+        </scene>
+        <!--Instruction2 View Controller-->
+        <scene sceneID="d9T-AX-9UR">
+            <objects>
+                <viewController id="3zU-07-S7Y" customClass="Instruction2ViewController" customModule="TradingGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bxh-m2-Vp0"/>
+                        <viewControllerLayoutGuide type="bottom" id="JQd-oN-rGk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q3q-4B-sBX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sd-44-0ot">
+                                <rect key="frame" x="114" y="51" width="147" height="30"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="25"/>
+                                <color key="textColor" red="0.01737350784" green="0.27774998550000002" blue="0.34060466290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIh-KZ-qrZ">
+                                <rect key="frame" x="152" y="517" width="71" height="42"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="25"/>
+                                <state key="normal" title="Ready">
+                                    <color key="titleColor" red="0.01737350784" green="0.27774998550000002" blue="0.34060466290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIG-fW-uR3">
+                                <rect key="frame" x="32" y="109" width="310" height="371"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="371" id="2KS-7t-Z8Q"/>
+                                </constraints>
+                                <string key="text">Each team has four items:  Chips, Gems, Money, and Clues  All items are valuable and can be traded to increase a team's final value at the end of the game  Anything can be traded and negotiated through the transaction tab </string>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
+                                <color key="textColor" red="0.94140189890000003" green="0.5086515546" blue="0.40500822660000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9805527329" green="0.9729376435" blue="0.9519129395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BIh-KZ-qrZ" firstAttribute="centerX" secondItem="UIG-fW-uR3" secondAttribute="centerX" id="31C-Dr-bal"/>
+                            <constraint firstItem="UIG-fW-uR3" firstAttribute="leading" secondItem="Q3q-4B-sBX" secondAttribute="leadingMargin" constant="16" id="7K3-Fr-T71"/>
+                            <constraint firstItem="0sd-44-0ot" firstAttribute="top" secondItem="bxh-m2-Vp0" secondAttribute="bottom" constant="31" id="NkZ-vf-ZQK"/>
+                            <constraint firstItem="UIG-fW-uR3" firstAttribute="centerX" secondItem="Q3q-4B-sBX" secondAttribute="centerX" id="Uug-KV-DY0"/>
+                            <constraint firstItem="0sd-44-0ot" firstAttribute="centerX" secondItem="UIG-fW-uR3" secondAttribute="centerX" id="hjm-dp-iNr"/>
+                            <constraint firstItem="UIG-fW-uR3" firstAttribute="top" secondItem="0sd-44-0ot" secondAttribute="bottom" constant="28" id="qpe-KD-ZbB"/>
+                            <constraint firstItem="BIh-KZ-qrZ" firstAttribute="top" secondItem="UIG-fW-uR3" secondAttribute="bottom" constant="37" id="x2A-0n-fHN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWw-Ks-Yhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2641" y="36"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Waiting" width="1166" height="726"/>
+        <image name="the trading game-4" width="800" height="300"/>
+    </resources>
+</document>

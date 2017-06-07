@@ -31,7 +31,7 @@ class LobbyViewController: UIViewController {
     
     // Performs segue when all teams have joined lobby
     private func waitingForLobbyToFill() {
-        sleep(3)
+        sleep(1)
         
         performSegue(withIdentifier: "instructionSegue", sender: self)
     }

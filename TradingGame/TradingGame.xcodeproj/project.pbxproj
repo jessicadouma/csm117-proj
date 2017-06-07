@@ -22,6 +22,8 @@
 		E8B4BE981EE7C35900E8680E /* Instruction1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B4BE971EE7C35900E8680E /* Instruction1ViewController.swift */; };
 		E8B4BE9A1EE7CD8900E8680E /* Instruction2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B4BE991EE7CD8900E8680E /* Instruction2ViewController.swift */; };
 		F627DF18F3CFE4F49D866176 /* Pods_TradingGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836C5AA7C015235987095DE9 /* Pods_TradingGameUITests.framework */; };
+		E8D0E70E1EE888A400FE5270 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0E70D1EE888A400FE5270 /* TransactionsTableViewController.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,9 @@
 		E8B4BE971EE7C35900E8680E /* Instruction1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instruction1ViewController.swift; sourceTree = "<group>"; };
 		E8B4BE991EE7CD8900E8680E /* Instruction2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instruction2ViewController.swift; sourceTree = "<group>"; };
 		FBD321E937DC822F6C7629B9 /* Pods-TradingGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradingGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradingGame/Pods-TradingGame.release.xcconfig"; sourceTree = "<group>"; };
+
+		E8D0E70D1EE888A400FE5270 /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +146,7 @@
 				E8B4BE671EE7692500E8680E /* AppDelegate.swift */,
 				E8B4BE691EE7692500E8680E /* ViewController.swift */,
 				E8B4BE6B1EE7692500E8680E /* Main.storyboard */,
+				E8D0E70D1EE888A400FE5270 /* TransactionsTableViewController.swift */,
 				E8B4BE991EE7CD8900E8680E /* Instruction2ViewController.swift */,
 				E8B4BE971EE7C35900E8680E /* Instruction1ViewController.swift */,
 				E8B4BE951EE7B70300E8680E /* LobbyViewController.swift */,
@@ -466,6 +472,7 @@
 				E8B4BE981EE7C35900E8680E /* Instruction1ViewController.swift in Sources */,
 				E8B4BE9A1EE7CD8900E8680E /* Instruction2ViewController.swift in Sources */,
 				E8B4BE681EE7692500E8680E /* AppDelegate.swift in Sources */,
+				E8D0E70E1EE888A400FE5270 /* TransactionsTableViewController.swift in Sources */,
 				E886B4971EE7DD64000F1946 /* MyTabBarController.swift in Sources */,
 				AE73F7E91EE8944D00F41371 /* ClientTradingGame.swift in Sources */,
 			);

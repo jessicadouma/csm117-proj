@@ -491,7 +491,7 @@
         <!--Clues-->
         <scene sceneID="gFV-Fm-rKS">
             <objects>
-                <tableViewController title="Clues" id="Zg9-iL-jz9" sceneMemberID="viewController">
+                <tableViewController title="Clues" id="Zg9-iL-jz9" customClass="CluesTableViewController" customModule="TradingGame" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="m5V-8d-FHF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

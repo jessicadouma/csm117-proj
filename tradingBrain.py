@@ -6,7 +6,6 @@ class TradingBrain:
         self.maxTeams = maxTeams
         self.teams = {}
 
-        self.purses = {}
         self.scoreBoard = {}
 
         self.items = tutils.build_itemlist()
@@ -20,7 +19,6 @@ class TradingBrain:
             return False
 
         self.teams[name] = team
-        self.purses[name] = 0
         self.scoreBoard[name] = 0
 
         self.numTeams += 1
@@ -29,13 +27,29 @@ class TradingBrain:
     def removeTeam(self, name):
         if name in self.teams:
             del self.teams[name]
-            del self.purses[name]
             del self.scoreBoard[name]
 
             self.numTeams -= 1
 
     def itemList(self, teamidx):
         return self.items[teamidx]
+
+    def replaceIndexWithInfoCards(self, indices):
+        infocards = []
+
+        icfile = "info_cards.txt"
+        
+        lines = tutils.read_file(icfile)
+
+        for index in indices:
+            i = int(index) - 1
+
+            if i >= 0:
+                infocards.append(lines[i].strip('\n'))
+            else:
+                infocards.append("0")
+
+        return infocards
 
     def allTeamsConnected(self):
         return self.numTeams == self.maxTeams

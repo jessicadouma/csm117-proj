@@ -98,18 +98,6 @@ class TransactionsTableViewController: UITableViewController, UITextFieldDelegat
     
     // Clear textfield values when transaction is sent
     @IBAction func sendItems(_ sender: Any) {
-        teamToTrade.text = ""
-        redValue.text = "0"
-        whiteValue.text = "0"
-        blueValue.text = "0"
-        onyxValue.text = "0"
-        emeraldValue.text = "0"
-        pearlValue.text = "0"
-        moneyValue.text = "0"
-        clue1.text = ""
-        clue2.text = ""
-        clue3.text = ""
-        
         if let transaction = prepareTransaction() {
             client.write(message: transaction)
         
@@ -126,6 +114,19 @@ class TransactionsTableViewController: UITableViewController, UITextFieldDelegat
                 print("present complete")
             }
         }
+        
+        // Reset labels
+        teamToTrade.text = ""
+        redValue.text = "0"
+        whiteValue.text = "0"
+        blueValue.text = "0"
+        onyxValue.text = "0"
+        emeraldValue.text = "0"
+        pearlValue.text = "0"
+        moneyValue.text = "0"
+        clue1.text = ""
+        clue2.text = ""
+        clue3.text = ""
     }
     
     private func prepareTransaction() -> String? {

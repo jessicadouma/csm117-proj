@@ -75,6 +75,8 @@ class ClientTradingGame {
         
         if event  == "ITEMS" {
             addInventory(items: data.components(separatedBy: ";"))
+        } else if event == "TRANSACTION" {
+            processTransaction(data.components(separatedBy: ";"))
         }
         
         return data
@@ -98,5 +100,45 @@ class ClientTradingGame {
         clues.append(items[7])
         clues.append(items[8])
         clues.append(items[9])
+    }
+    
+    private func processTransaction(_ transaction: [String]) {
+        if let chipAmount = chips["Red"] {
+            chips["Red"] = chipAmount + Int(transaction[2])!
+        }
+        
+        if let chipAmount = chips["White"] {
+            chips["White"] = chipAmount + Int(transaction[3])!
+        }
+        
+        if let chipAmount = chips["Blue"] {
+            chips["Blue"] = chipAmount + Int(transaction[4])!
+        }
+        
+        if let gemAmount = gems["Onyx"] {
+            gems["Onyx"] = gemAmount + Int(transaction[5])!
+        }
+        
+        if let gemAmount = gems["Emeralds"] {
+            gems["Emeralds"] = gemAmount + Int(transaction[6])!
+        }
+        
+        if let gemAmount = gems["Pearls"] {
+            gems["Pearls"] = gemAmount + Int(transaction[7])!
+        }
+        
+        purse += Int(transaction[8])!
+        
+        if transaction[9] != "0" {
+            clues.append(transaction[9])
+        }
+        
+        if transaction[10] != "0" {
+            clues.append(transaction[10])
+        }
+        
+        if transaction[11] != "0" {
+            clues.append(transaction[11])
+        }
     }
 }

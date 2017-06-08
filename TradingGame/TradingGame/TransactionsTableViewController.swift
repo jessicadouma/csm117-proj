@@ -110,20 +110,70 @@ class TransactionsTableViewController: UITableViewController, UITextFieldDelegat
         clue2.text = ""
         clue3.text = ""
         
+        if let transaction = prepareTransaction() {
+            client.write(message: transaction)
         
-        // Alert user that transaction was sent
-        let alert: UIAlertController = UIAlertController(title: "Transaction Sent!", message: "You can view the changes in the items and clue tabs.", preferredStyle: .alert)
+            // Alert user that transaction was sent
+            let alert: UIAlertController = UIAlertController(title: "Transaction Sent!", message: "You can view the changes in the items and clue tabs.", preferredStyle: .alert)
         
-        let action1: UIAlertAction = UIAlertAction(title: "Okay", style: .default) { (_:UIAlertAction) in
+            let action1: UIAlertAction = UIAlertAction(title: "Okay", style: .default) { (_:UIAlertAction) in
             print("okay")
+            }
+        
+            alert.addAction(action1)
+            
+            self.present(alert, animated: true) {
+                print("present complete")
+            }
+        }
+    }
+    
+    private func prepareTransaction() -> String? {
+        var transaction = [String]()
+        
+        guard let team = teamToTrade.text else { return nil }
+        transaction.append(team)
+        
+        guard let redChipValue = redValue.text else { return nil }
+        transaction.append(redChipValue)
+        
+        guard let whiteChipValue = whiteValue.text else { return nil }
+        transaction.append(whiteChipValue)
+        
+        guard let blueChipValue = blueValue.text else { return nil }
+        transaction.append(blueChipValue)
+        
+        guard let onyxGemValue = onyxValue.text else { return nil }
+        transaction.append(onyxGemValue)
+        
+        guard let emeraldGemValue = emeraldValue.text else { return nil }
+        transaction.append(emeraldGemValue)
+        
+        guard let pearlGemValue = pearlValue.text else { return nil }
+        transaction.append(pearlGemValue)
+        
+        guard let clue1 = clue1.text else { return nil }
+        if clue1 != "" {
+            transaction.append(clue1)
+        } else {
+            transaction.append("0")
         }
         
-        alert.addAction(action1)
-        
-        self.present(alert, animated: true) { 
-            print("present complete")
+        guard let clue2 = clue2.text else { return nil }
+        if clue2 != "" {
+            transaction.append(clue2)
+        } else {
+            transaction.append("0")
         }
         
+        guard let clue3 = clue3.text else { return nil }
+        if clue3 != "" {
+            transaction.append(clue3)
+        } else {
+            transaction.append("0")
+        }
+        
+        return "TRANSACTION:" + transaction.joined(separator: ";")
     }
     
     // Dismisses keyboard if user clicks return

@@ -143,15 +143,15 @@ class ClientTradingGame {
         
         moneyTransaction(amount: Int(transaction[7])!)
         
-        if transaction[9] != "0" {
+        if transaction[8] != "0" {
             clues.append(transaction[8])
         }
         
-        if transaction[10] != "0" {
+        if transaction[9] != "0" {
             clues.append(transaction[9])
         }
         
-        if transaction[11] != "0" {
+        if transaction[10] != "0" {
             clues.append(transaction[10])
         }
     }

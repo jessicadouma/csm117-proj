@@ -18,6 +18,11 @@ class ClientTradingGame {
     var chips = [String:Int]()
     var clues = [String]()
     
+    var currentRound = 0
+    var roundTime = 0
+    
+    var roundActive = false
+    
     init(connect clientName: String, toHost host: String, onPort port: Int) {
         name = clientName
         
@@ -83,6 +88,12 @@ class ClientTradingGame {
                     addInventory(items: data.components(separatedBy: ";"))
                 } else if event == "TRANSACTION" {
                     processTransaction(data.components(separatedBy: ";"))
+                } else if event == "ROUNDSTART" {
+                    roundActive = true
+                    var roundInfo = data.components(separatedBy: ";")
+                    
+                    currentRound = Int(roundInfo[0])!
+                    roundTime = Int(roundInfo[1])!
                 }
             
                 allDataReceived.append(data)
@@ -143,15 +154,15 @@ class ClientTradingGame {
         
         moneyTransaction(amount: Int(transaction[7])!)
         
-        if transaction[9] != "0" {
+        if transaction[8] != "0" {
             clues.append(transaction[8])
         }
         
-        if transaction[10] != "0" {
+        if transaction[9] != "0" {
             clues.append(transaction[9])
         }
         
-        if transaction[11] != "0" {
+        if transaction[10] != "0" {
             clues.append(transaction[10])
         }
     }

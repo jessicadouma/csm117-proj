@@ -13,19 +13,6 @@ class MyTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        client.write(message: client.name)
-        
-        let responses = client.read()
-        
-        for response in responses {
-            if let r = response {
-                print(r)
-            } else {
-                print("Could not read from server")
-            }
-        }
-
     }
 
     override func didReceiveMemoryWarning() {

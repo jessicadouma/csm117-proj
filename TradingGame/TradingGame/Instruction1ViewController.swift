@@ -9,9 +9,7 @@
 import UIKit
 
 class Instruction1ViewController: UIViewController {
-    
-    var hostName: String!
-    var teamName: String!
+    var client: ClientTradingGame!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +26,7 @@ class Instruction1ViewController: UIViewController {
         if segue.identifier == "instruction2Segue" {
             let vc = segue.destination as! Instruction2ViewController
             
-            vc.hostName = hostName
-            vc.teamName = teamName
+            vc.client = client
         }
     }
     

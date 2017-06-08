@@ -9,9 +9,7 @@
 import UIKit
 
 class Instruction2ViewController: UIViewController {
-    
-    var hostName: String!
-    var teamName: String!
+    var client: ClientTradingGame!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +26,7 @@ class Instruction2ViewController: UIViewController {
         let mainST = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = mainST.instantiateViewController(withIdentifier: "myTabBar") as! MyTabBarController
 
-        vc.client = ClientTradingGame(connect: teamName, toHost: hostName, onPort: 1024)
+        vc.client = client
         present(vc, animated: true, completion: nil)
     }
     

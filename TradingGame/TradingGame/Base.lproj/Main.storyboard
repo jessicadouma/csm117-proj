@@ -495,6 +495,77 @@
             </objects>
             <point key="canvasLocation" x="33" y="1355"/>
         </scene>
+        <!--Leaderboard-->
+        <scene sceneID="Oan-xG-yAQ">
+            <objects>
+                <viewController title="Leaderboard" id="jQG-3a-frW" customClass="LeaderboardViewController" customModule="TradingGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="65d-dG-dNB"/>
+                        <viewControllerLayoutGuide type="bottom" id="EyK-wJ-wTt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kY6-49-Ccg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Leaderboard" translatesAutoresizingMaskIntoConstraints="NO" id="eAw-Zo-8wE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEAM AWESOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6w-FM-O0M">
+                                <rect key="frame" x="64" y="202" width="295" height="35"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="30"/>
+                                <color key="textColor" red="0.01737350784" green="0.27774998550000002" blue="0.34060466290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEAM AWESOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zF-eu-UPR">
+                                <rect key="frame" x="64" y="354" width="295" height="35"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="30"/>
+                                <color key="textColor" red="0.01737350784" green="0.27774998550000002" blue="0.34060466290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEAM AWESOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXy-Xs-eyk">
+                                <rect key="frame" x="64" y="435" width="295" height="35"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="30"/>
+                                <color key="textColor" red="0.01737350784" green="0.27774998550000002" blue="0.34060466290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEAM AWESOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bn-dt-afT">
+                                <rect key="frame" x="64" y="282" width="295" height="35"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="30"/>
+                                <color key="textColor" red="0.01737350784" green="0.27774998550000002" blue="0.34060466290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eAw-Zo-8wE" firstAttribute="top" secondItem="kY6-49-Ccg" secondAttribute="top" id="5Hd-Lg-nG3"/>
+                            <constraint firstItem="zXy-Xs-eyk" firstAttribute="trailing" secondItem="1zF-eu-UPR" secondAttribute="trailing" id="D9R-UR-uTg"/>
+                            <constraint firstItem="Z6w-FM-O0M" firstAttribute="leading" secondItem="kY6-49-Ccg" secondAttribute="leadingMargin" constant="48" id="EGZ-dn-aEM"/>
+                            <constraint firstItem="Z6w-FM-O0M" firstAttribute="trailing" secondItem="kY6-49-Ccg" secondAttribute="trailingMargin" id="HMx-vd-rhu"/>
+                            <constraint firstAttribute="trailing" secondItem="eAw-Zo-8wE" secondAttribute="trailing" id="Ssg-mm-6OH"/>
+                            <constraint firstItem="1zF-eu-UPR" firstAttribute="top" secondItem="1Bn-dt-afT" secondAttribute="bottom" constant="37" id="TAw-95-s0g"/>
+                            <constraint firstItem="1Bn-dt-afT" firstAttribute="top" secondItem="Z6w-FM-O0M" secondAttribute="bottom" constant="45" id="WHA-sq-ten"/>
+                            <constraint firstItem="eAw-Zo-8wE" firstAttribute="leading" secondItem="kY6-49-Ccg" secondAttribute="leading" id="e9W-xQ-1Zi"/>
+                            <constraint firstItem="zXy-Xs-eyk" firstAttribute="leading" secondItem="Z6w-FM-O0M" secondAttribute="leading" id="f4Z-VN-s1N"/>
+                            <constraint firstItem="1zF-eu-UPR" firstAttribute="leading" secondItem="1Bn-dt-afT" secondAttribute="leading" id="hji-rP-u3q"/>
+                            <constraint firstItem="1zF-eu-UPR" firstAttribute="trailing" secondItem="1Bn-dt-afT" secondAttribute="trailing" id="hlb-ch-9YH"/>
+                            <constraint firstItem="Z6w-FM-O0M" firstAttribute="top" secondItem="65d-dG-dNB" secondAttribute="bottom" constant="182" id="kry-44-DM3"/>
+                            <constraint firstItem="zXy-Xs-eyk" firstAttribute="top" secondItem="1zF-eu-UPR" secondAttribute="bottom" constant="46" id="lPf-j0-N9F"/>
+                            <constraint firstItem="zXy-Xs-eyk" firstAttribute="trailing" secondItem="Z6w-FM-O0M" secondAttribute="trailing" id="lgG-9g-90n"/>
+                            <constraint firstItem="eAw-Zo-8wE" firstAttribute="bottom" secondItem="EyK-wJ-wTt" secondAttribute="top" id="nbP-h9-5De"/>
+                            <constraint firstItem="zXy-Xs-eyk" firstAttribute="leading" secondItem="1zF-eu-UPR" secondAttribute="leading" id="zlM-lD-691"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="team1" destination="Z6w-FM-O0M" id="Xg1-5n-ySw"/>
+                        <outlet property="team2" destination="1Bn-dt-afT" id="6eE-67-n3B"/>
+                        <outlet property="team3" destination="1zF-eu-UPR" id="zDv-PC-qrY"/>
+                        <outlet property="team4" destination="zXy-Xs-eyk" id="jeW-AT-EZL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GLq-mV-4uM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="2409"/>
+        </scene>
         <!--Clues-->
         <scene sceneID="gFV-Fm-rKS">
             <objects>
@@ -1246,6 +1317,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Leaderboard" width="800" height="1000"/>
         <image name="Waiting" width="1166" height="726"/>
         <image name="icons8-Box Filled-50" width="50" height="50"/>
         <image name="icons8-Cash in Hand-50" width="50" height="50"/>

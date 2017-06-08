@@ -56,6 +56,26 @@ class TradingGame(LineReceiver):
         data = msg.split(':')
 
         event = data[0]
+        
+        if event == "TRANS_REQUEST" or "TRANS_REPLY":
+            requestee = data[2]
+            self.tb.teams[requestee].sendLine(msg)
+
+        elif event == "ROUNDEND":
+            # if roundend_cnt < 12
+            #    update score for this client
+            # else
+            self.state = "ROUNDEND"
+
+            if self.tb.nextRound() is False:
+                # send leader board
+                # wait one minute
+                # end game
+                ;
+            else:
+                # send leader board
+                # wait one minute
+                # start next round
 
         if event == "TRANSACTION":
             transaction = data[1].split(';')

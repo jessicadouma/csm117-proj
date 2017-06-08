@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TradingGame/TransactionsTableViewController.swift"
-            timestampString = "518592053.73279"
+            timestampString = "518592693.742853"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
             landmarkName = "prepareTransaction()"
             landmarkType = "7">
          </BreakpointContent>

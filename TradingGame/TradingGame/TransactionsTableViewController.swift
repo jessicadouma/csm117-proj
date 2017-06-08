@@ -96,6 +96,26 @@ class TransactionsTableViewController: UITableViewController, UITextFieldDelegat
         }
     }
     
+    @IBAction func receiveItems(_ sender: Any) {
+        if let response = client.read() {
+            print(response)
+            
+            // Alert user that transaction was received
+            let alert: UIAlertController = UIAlertController(title: "Transaction Received!", message: "You can view the changes in the items and clue tabs.", preferredStyle: .alert)
+            
+            let action1: UIAlertAction = UIAlertAction(title: "Okay", style: .default) { (_:UIAlertAction) in
+                print("okay")
+            }
+            
+            alert.addAction(action1)
+            
+            self.present(alert, animated: true) {
+                print("present complete")
+            }
+        }
+    }
+    
+    
     // Clear textfield values when transaction is sent
     @IBAction func sendItems(_ sender: Any) {
         if let transaction = prepareTransaction() {

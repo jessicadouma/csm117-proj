@@ -1259,11 +1259,11 @@
                                         <rect key="frame" x="0.0" y="789.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YAJ-LD-pEx" id="6yK-Rc-5A1">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9E-uw-RRf">
-                                                    <rect key="frame" x="130" y="3" width="115" height="37"/>
+                                                    <rect key="frame" x="47" y="3" width="115" height="37"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="21"/>
                                                     <state key="normal" title="Send Items!">
                                                         <color key="titleColor" red="0.01737350784" green="0.27774998550000002" blue="0.34060466290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1272,10 +1272,22 @@
                                                         <action selector="sendItems:" destination="zVD-xH-nnF" eventType="touchUpInside" id="CMM-Ux-Cvl"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBd-6S-bFY">
+                                                    <rect key="frame" x="191" y="3" width="145" height="37"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="21"/>
+                                                    <state key="normal" title="Receive Items!">
+                                                        <color key="titleColor" red="0.01737350784" green="0.27774998550000002" blue="0.34060466290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="receiveItems:" destination="zVD-xH-nnF" eventType="touchUpInside" id="cTf-kA-5f6"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="r9E-uw-RRf" firstAttribute="centerX" secondItem="6yK-Rc-5A1" secondAttribute="centerX" id="C4D-cK-pCt"/>
-                                                <constraint firstItem="r9E-uw-RRf" firstAttribute="centerY" secondItem="6yK-Rc-5A1" secondAttribute="centerY" id="ZxS-Di-Erg"/>
+                                                <constraint firstItem="dBd-6S-bFY" firstAttribute="baseline" secondItem="r9E-uw-RRf" secondAttribute="baseline" id="dTJ-CO-ubT"/>
+                                                <constraint firstItem="r9E-uw-RRf" firstAttribute="leading" secondItem="6yK-Rc-5A1" secondAttribute="leadingMargin" constant="39" id="ghh-Cc-yEl"/>
+                                                <constraint firstItem="dBd-6S-bFY" firstAttribute="leading" secondItem="r9E-uw-RRf" secondAttribute="trailing" constant="29" id="rxD-bl-nIY"/>
+                                                <constraint firstItem="r9E-uw-RRf" firstAttribute="centerY" secondItem="6yK-Rc-5A1" secondAttribute="centerY" id="v3M-Pk-hQi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

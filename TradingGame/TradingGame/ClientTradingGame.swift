@@ -123,26 +123,26 @@ class ClientTradingGame {
     }
     
     private func processTransaction(_ transaction: [String]) {
-        chipTransaction(amount: Int(transaction[4])!, from: "Red")
-        chipTransaction(amount: Int(transaction[5])!, from: "White")
-        chipTransaction(amount: Int(transaction[6])!, from: "Blue")
+        chipTransaction(amount: Int(transaction[1])!, from: "Red")
+        chipTransaction(amount: Int(transaction[2])!, from: "White")
+        chipTransaction(amount: Int(transaction[3])!, from: "Blue")
         
-        gemTransaction(amount: Int(transaction[7])!, from: "Onyx")
-        gemTransaction(amount: Int(transaction[8])!, from: "Emeralds")
-        gemTransaction(amount: Int(transaction[9])!, from: "Pearls")
+        gemTransaction(amount: Int(transaction[4])!, from: "Onyx")
+        gemTransaction(amount: Int(transaction[5])!, from: "Emeralds")
+        gemTransaction(amount: Int(transaction[6])!, from: "Pearls")
         
-        moneyTransaction(amount: Int(transaction[8])!)
+        moneyTransaction(amount: Int(transaction[7])!)
         
         if transaction[9] != "0" {
-            clues.append(transaction[9])
+            clues.append(transaction[8])
         }
         
         if transaction[10] != "0" {
-            clues.append(transaction[10])
+            clues.append(transaction[9])
         }
         
         if transaction[11] != "0" {
-            clues.append(transaction[11])
+            clues.append(transaction[10])
         }
     }
 }

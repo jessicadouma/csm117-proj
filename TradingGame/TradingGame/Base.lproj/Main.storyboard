@@ -846,8 +846,8 @@
         <scene sceneID="JAv-Qd-j2y">
             <objects>
                 <tableViewController title="Transactions" id="zVD-xH-nnF" customClass="TransactionsTableViewController" customModule="TradingGame" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ZBF-pc-6Nj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ZBF-pc-6Nj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.9805527329" green="0.9729376435" blue="0.9519129395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="e6p-on-szA">
@@ -1259,24 +1259,30 @@
                                         <rect key="frame" x="0.0" y="789.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YAJ-LD-pEx" id="6yK-Rc-5A1">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9E-uw-RRf">
-                                                    <rect key="frame" x="47" y="3" width="115" height="37"/>
+                                                    <rect key="frame" x="47" y="3" width="48" height="37"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="21"/>
-                                                    <state key="normal" title="Send Items!">
+                                                    <state key="normal" title="Send">
                                                         <color key="titleColor" red="0.01737350784" green="0.27774998550000002" blue="0.34060466290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="sendItems:" destination="zVD-xH-nnF" eventType="touchUpInside" id="CMM-Ux-Cvl"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBd-6S-bFY">
-                                                    <rect key="frame" x="191" y="3" width="145" height="37"/>
-                                                    <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="21"/>
-                                                    <state key="normal" title="Receive Items!">
-                                                        <color key="titleColor" red="0.01737350784" green="0.27774998550000002" blue="0.34060466290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dBd-6S-bFY">
+                                                    <rect key="frame" x="251" y="3" width="78" height="37"/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Receive">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.01737350784" green="0.27774998550000002" blue="0.34060466290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="21" name="TrebuchetMS-Bold"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                     </state>
                                                     <connections>
                                                         <action selector="receiveItems:" destination="zVD-xH-nnF" eventType="touchUpInside" id="cTf-kA-5f6"/>
@@ -1284,9 +1290,9 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="dBd-6S-bFY" firstAttribute="baseline" secondItem="r9E-uw-RRf" secondAttribute="baseline" id="dTJ-CO-ubT"/>
+                                                <constraint firstItem="dBd-6S-bFY" firstAttribute="baseline" secondItem="r9E-uw-RRf" secondAttribute="baseline" id="EUz-oe-FJu"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dBd-6S-bFY" secondAttribute="trailing" constant="38" id="KhR-qW-DjF"/>
                                                 <constraint firstItem="r9E-uw-RRf" firstAttribute="leading" secondItem="6yK-Rc-5A1" secondAttribute="leadingMargin" constant="39" id="ghh-Cc-yEl"/>
-                                                <constraint firstItem="dBd-6S-bFY" firstAttribute="leading" secondItem="r9E-uw-RRf" secondAttribute="trailing" constant="29" id="rxD-bl-nIY"/>
                                                 <constraint firstItem="r9E-uw-RRf" firstAttribute="centerY" secondItem="6yK-Rc-5A1" secondAttribute="centerY" id="v3M-Pk-hQi"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1299,6 +1305,7 @@
                             <outlet property="delegate" destination="zVD-xH-nnF" id="Wpb-wl-wdc"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="" image="icons8-Cash in Hand-50" id="33M-TU-a23">
                         <inset key="imageInsets" minX="2" minY="8" maxX="2" maxY="-4"/>
                     </tabBarItem>

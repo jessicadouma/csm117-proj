@@ -40,6 +40,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
             guard let team = teamField.text else { return false }
             
             if team.isEmpty || host.isEmpty {
+                // Alert user that transaction was received
+                let alert: UIAlertController = UIAlertController(title: "Error", message: "You must enter a hostname and team name to proceed", preferredStyle: .alert)
+                
+                let action1: UIAlertAction = UIAlertAction(title: "Okay", style: .default) { (_:UIAlertAction) in
+                    print("okay")
+                }
+                
+                alert.addAction(action1)
+                
+                self.present(alert, animated: true) {
+                    print("present complete")
+                }
+
+                
                 return false
             }
             

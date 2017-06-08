@@ -9,15 +9,35 @@
 import UIKit
 
 class ItemsTableViewController: UITableViewController {
-
+    var client: ClientTradingGame!
+    
+    @IBOutlet weak var redLabel: UILabel!
+    @IBOutlet weak var whiteLabel: UILabel!
+    @IBOutlet weak var blueLabel: UILabel!
+    @IBOutlet weak var OnyxLabel: UILabel!
+    @IBOutlet weak var EmeraldsLabel: UILabel!
+    @IBOutlet weak var PearlsLabel: UILabel!
+    @IBOutlet weak var moneyLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let tbc = self.tabBarController as! MyTabBarController
+        client = tbc.client
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        updateChips()
+        updateGems()
+        updateMoney()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +59,38 @@ class ItemsTableViewController: UITableViewController {
         return numberOfRowsAtSection[section]
     }
 
+    private func updateChips() {
+        if let redChipAmount = client.chips["Red"] {
+            redLabel.text = String(redChipAmount)
+        }
+        
+        if let whiteChipAmount = client.chips["White"] {
+            whiteLabel.text = String(whiteChipAmount)
+        }
+        
+        if let blueChipAmount = client.chips["Blue"] {
+            blueLabel.text = String(blueChipAmount)
+        }
+    }
+    
+    private func updateGems() {
+        if let onyxGemAmount = client.gems["Onyx"] {
+            OnyxLabel.text = String(onyxGemAmount)
+        }
+        
+        if let emeraldsGemAmount = client.gems["Emeralds"] {
+            EmeraldsLabel.text = String(emeraldsGemAmount)
+        }
+        
+        if let pearlsGemAmount = client.gems["Pearls"] {
+            PearlsLabel.text = String(pearlsGemAmount)
+        }
+    }
+    
+    private func updateMoney() {
+        moneyLabel.text = String(client.purse)
+    }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

@@ -26,9 +26,10 @@ class Instruction2ViewController: UIViewController {
 
     @IBAction func readyToPlay(_ sender: Any) {
         let mainST = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let vc = mainST.instantiateViewController(withIdentifier: "myTabBar")
+        let vc = mainST.instantiateViewController(withIdentifier: "myTabBar") as! MyTabBarController
+
+        vc.client = ClientTradingGame(connect: teamName, toHost: hostName, onPort: 1024)
         present(vc, animated: true, completion: nil)
-        
     }
     
     /*

@@ -34,14 +34,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
-    // Store hostname
-    @IBAction func enteredHost(_ sender: Any) {
-        hostName = hostField.text!
-    }
-    
-    // Store team name
-    @IBAction func enteredTeam(_ sender: Any) {
-        teamName = teamField.text!
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "joinGameSegue" {
+            guard let host = hostField.text else { return false }
+            guard let team = teamField.text else { return false }
+            
+            if team.isEmpty || host.isEmpty {
+                return false
+            }
+            
+            hostName = host
+            teamName = team
+        }
+        
+        return true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

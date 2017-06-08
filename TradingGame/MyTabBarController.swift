@@ -9,11 +9,17 @@
 import UIKit
 
 class MyTabBarController: UITabBarController {
-
+    var client: ClientTradingGame!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        client.write(message: client.name)
+        if let response = client.read() {
+            print(response)
+        } else {
+            print("Could not read from server")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +27,6 @@ class MyTabBarController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

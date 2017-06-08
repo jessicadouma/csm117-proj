@@ -9,6 +9,7 @@
 import UIKit
 
 class TransactionsTableViewController: UITableViewController, UITextFieldDelegate {
+    var client: ClientTradingGame!
     
     // Stepper variables
     @IBOutlet weak var redStepper: UIStepper!
@@ -32,10 +33,12 @@ class TransactionsTableViewController: UITableViewController, UITextFieldDelegat
     @IBOutlet weak var clue2: UITextField!
     @IBOutlet weak var clue3: UITextField!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let tbc = self.tabBarController as! MyTabBarController
+        client = tbc.client
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -44,26 +47,53 @@ class TransactionsTableViewController: UITableViewController, UITextFieldDelegat
     }
     
     // Update textfield values
+    private func updateChipsLabel(_ label: UILabel, color: String, to amount: Double) {
+        guard let numChips = client.chips[color] else { return }
+        
+        if Int(amount) <= numChips {
+            label.text = String(Int(amount))
+        }
+    }
+    
     @IBAction func updateRed(_ sender: Any) {
-        redValue.text = String(Int(redStepper.value))
+        updateChipsLabel(redValue, color: "Red", to: redStepper.value)
     }
+    
     @IBAction func updateWhite(_ sender: Any) {
-        whiteValue.text = String(Int(whiteStepper.value))
+        updateChipsLabel(whiteValue, color: "White", to: whiteStepper.value)
     }
+    
     @IBAction func updateBlue(_ sender: Any) {
-        blueValue.text = String(Int(blueStepper.value))
+        updateChipsLabel(blueValue, color: "Blue", to: blueStepper.value)
     }
+    
+    private func updateGemsLabel(_ label: UILabel, gem: String, to amount: Double) {
+        guard let numGems = client.gems[gem] else { return }
+        
+        if Int(amount) <= numGems {
+            label.text = String(Int(amount))
+        }
+    }
+    
     @IBAction func updateOnyx(_ sender: Any) {
-        onyxValue.text = String(Int(onyxStepper.value))
+        updateGemsLabel(onyxValue, gem: "Onyx", to: onyxStepper.value)
     }
+    
     @IBAction func updateEmerald(_ sender: Any) {
-        emeraldValue.text = String(Int(emeraldStepper.value))
+        updateGemsLabel(emeraldValue, gem: "Emeralds", to: emeraldStepper.value)
     }
+    
     @IBAction func updatePearl(_ sender: Any) {
-        pearlValue.text = String(Int(pearlStepper.value))
+       updateGemsLabel(pearlValue, gem: "Pearls", to: pearlStepper.value)
     }
+    
     @IBAction func updateMoney(_ sender: Any) {
-        moneyValue.text = String(Int(moneyStepper.value))
+        let amount = client.purse
+        let value = moneyStepper.value
+        
+        if Int(value) <= amount {
+            moneyValue.text = String(Int(value))
+        }
     }
     
     // Clear textfield values when transaction is sent

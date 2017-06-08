@@ -9,9 +9,13 @@
 import UIKit
 
 class CluesTableViewController: UITableViewController {
-
+    var client: ClientTradingGame!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tbc = self.tabBarController as! MyTabBarController
+        client = tbc.client
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

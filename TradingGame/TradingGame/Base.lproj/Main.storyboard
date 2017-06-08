@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -38,7 +38,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
-                                    <action selector="enteredHost:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="JMU-kE-86E"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="sda-W4-4pK"/>
                                 </connections>
                             </textField>
@@ -54,7 +53,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
-                                    <action selector="enteredTeam:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="PBq-n7-NjA"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="LFQ-ad-amn"/>
                                 </connections>
                             </textField>
@@ -464,10 +462,19 @@
                     <tabBarItem key="tabBarItem" title="" image="icons8-Box Filled-50" id="RHT-4M-g04">
                         <inset key="imageInsets" minX="2" minY="8" maxX="2" maxY="-4"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="EmeraldsLabel" destination="0Vy-fk-1OO" id="p8f-mL-xVY"/>
+                        <outlet property="OnyxLabel" destination="Of7-dH-bOG" id="b2K-uM-8f3"/>
+                        <outlet property="PearlsLabel" destination="bcg-DE-mlc" id="VfV-Ig-0A2"/>
+                        <outlet property="blueLabel" destination="Mnk-NN-Ver" id="KtJ-7N-aDS"/>
+                        <outlet property="moneyLabel" destination="Wo2-Uw-Wnr" id="OIN-8j-NZv"/>
+                        <outlet property="redLabel" destination="R7w-Bj-22o" id="Ege-Ml-etd"/>
+                        <outlet property="whiteLabel" destination="Shy-35-FTW" id="8Gm-6V-LbS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vpp-D6-vEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1142" y="789"/>
+            <point key="canvasLocation" x="1141.5999999999999" y="788.45577211394311"/>
         </scene>
         <!--My Tab Bar Controller-->
         <scene sceneID="Ou8-hY-tLf">
@@ -520,612 +527,792 @@
                                         <rect key="frame" x="0.0" y="66" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ddl-uX-cWh" id="8J7-Og-dFG">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #1 - A bonus of $5 will be paid for every white chip a team has at the end of the second quarter." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moZ-gW-hhW">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moZ-gW-hhW">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="moZ-gW-hhW" firstAttribute="leading" secondItem="8J7-Og-dFG" secondAttribute="leadingMargin" constant="7" id="PKf-Rh-0j5"/>
+                                                <constraint firstItem="moZ-gW-hhW" firstAttribute="centerX" secondItem="8J7-Og-dFG" secondAttribute="centerX" id="kHz-HS-tYe"/>
+                                                <constraint firstItem="moZ-gW-hhW" firstAttribute="centerY" secondItem="8J7-Og-dFG" secondAttribute="centerY" id="rdf-UG-Oia"/>
+                                                <constraint firstItem="moZ-gW-hhW" firstAttribute="top" secondItem="8J7-Og-dFG" secondAttribute="topMargin" constant="-4" id="vMi-4f-lPT"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="4dA-PO-xAh">
                                         <rect key="frame" x="0.0" y="166" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4dA-PO-xAh" id="5tQ-jA-JEo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #2 - A bonus of $5 will be paid for every blue chip a team has at the end of the third quarter." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2N5-Jr-g7Q">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2N5-Jr-g7Q">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2N5-Jr-g7Q" firstAttribute="centerX" secondItem="5tQ-jA-JEo" secondAttribute="centerX" id="6iV-CX-x9f"/>
+                                                <constraint firstItem="2N5-Jr-g7Q" firstAttribute="top" secondItem="5tQ-jA-JEo" secondAttribute="topMargin" constant="-4" id="Hkl-Cy-IcL"/>
+                                                <constraint firstItem="2N5-Jr-g7Q" firstAttribute="centerY" secondItem="5tQ-jA-JEo" secondAttribute="centerY" id="N8b-L0-vEx"/>
+                                                <constraint firstItem="2N5-Jr-g7Q" firstAttribute="leading" secondItem="5tQ-jA-JEo" secondAttribute="leadingMargin" constant="7" id="OYM-17-UFX"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="2EH-UE-aMc">
                                         <rect key="frame" x="0.0" y="266" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2EH-UE-aMc" id="Fta-qd-dno">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #3 - A bonus 5$ will be paid for every red chip a team has at the end of the first quarter." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJS-dG-Qfv">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJS-dG-Qfv">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wJS-dG-Qfv" firstAttribute="centerX" secondItem="Fta-qd-dno" secondAttribute="centerX" id="8vD-31-Gg6"/>
+                                                <constraint firstItem="wJS-dG-Qfv" firstAttribute="leading" secondItem="Fta-qd-dno" secondAttribute="leadingMargin" constant="7" id="ASv-oQ-kby"/>
+                                                <constraint firstItem="wJS-dG-Qfv" firstAttribute="top" secondItem="Fta-qd-dno" secondAttribute="topMargin" constant="-4" id="HdV-zu-gmC"/>
+                                                <constraint firstItem="wJS-dG-Qfv" firstAttribute="centerY" secondItem="Fta-qd-dno" secondAttribute="centerY" id="yUg-jQ-6j9"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="the-2F-BLe">
                                         <rect key="frame" x="0.0" y="366" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="the-2F-BLe" id="8Pb-vQ-CFc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #4 - White chips represent power." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5m-bq-qPN">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5m-bq-qPN">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="d5m-bq-qPN" firstAttribute="centerY" secondItem="8Pb-vQ-CFc" secondAttribute="centerY" id="3DZ-kv-Oja"/>
+                                                <constraint firstItem="d5m-bq-qPN" firstAttribute="leading" secondItem="8Pb-vQ-CFc" secondAttribute="leadingMargin" constant="7" id="9cd-xG-YIJ"/>
+                                                <constraint firstItem="d5m-bq-qPN" firstAttribute="top" secondItem="8Pb-vQ-CFc" secondAttribute="topMargin" constant="-4" id="Mlm-rs-jyw"/>
+                                                <constraint firstItem="d5m-bq-qPN" firstAttribute="centerX" secondItem="8Pb-vQ-CFc" secondAttribute="centerX" id="VtC-fa-ZuJ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="fMw-dD-j3O">
                                         <rect key="frame" x="0.0" y="466" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fMw-dD-j3O" id="LE3-7X-TLX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #5 - Onyx is not equal to blue chips." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xv0-je-x7R">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xv0-je-x7R">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xv0-je-x7R" firstAttribute="top" secondItem="LE3-7X-TLX" secondAttribute="topMargin" constant="-4" id="KU7-Zx-hoP"/>
+                                                <constraint firstItem="Xv0-je-x7R" firstAttribute="centerY" secondItem="LE3-7X-TLX" secondAttribute="centerY" id="MAi-VJ-WuG"/>
+                                                <constraint firstItem="Xv0-je-x7R" firstAttribute="centerX" secondItem="LE3-7X-TLX" secondAttribute="centerX" id="emd-NV-pZk"/>
+                                                <constraint firstItem="Xv0-je-x7R" firstAttribute="leading" secondItem="LE3-7X-TLX" secondAttribute="leadingMargin" constant="7" id="fQE-YQ-I6n"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="JCc-u3-QRP">
                                         <rect key="frame" x="0.0" y="566" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JCc-u3-QRP" id="ghX-P4-ifa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #6 - Red chips represent power." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjC-IM-uBZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjC-IM-uBZ">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OjC-IM-uBZ" firstAttribute="leading" secondItem="ghX-P4-ifa" secondAttribute="leadingMargin" constant="7" id="Ous-gM-rXl"/>
+                                                <constraint firstItem="OjC-IM-uBZ" firstAttribute="centerX" secondItem="ghX-P4-ifa" secondAttribute="centerX" id="Tce-Ql-NJe"/>
+                                                <constraint firstItem="OjC-IM-uBZ" firstAttribute="centerY" secondItem="ghX-P4-ifa" secondAttribute="centerY" id="dZ4-lX-WeJ"/>
+                                                <constraint firstItem="OjC-IM-uBZ" firstAttribute="top" secondItem="ghX-P4-ifa" secondAttribute="topMargin" constant="-4" id="kNg-yP-Y3b"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="ESR-IP-kHc">
                                         <rect key="frame" x="0.0" y="666" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ESR-IP-kHc" id="0fY-zV-MAQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #24 - If a team does not have at least one poker chip of each color at the end of the game, they will be penalized $200." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AX1-L6-FSg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AX1-L6-FSg">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AX1-L6-FSg" firstAttribute="leading" secondItem="0fY-zV-MAQ" secondAttribute="leadingMargin" constant="7" id="3PV-4Y-HuQ"/>
+                                                <constraint firstItem="AX1-L6-FSg" firstAttribute="centerY" secondItem="0fY-zV-MAQ" secondAttribute="centerY" id="G1t-h5-3eh"/>
+                                                <constraint firstItem="AX1-L6-FSg" firstAttribute="top" secondItem="0fY-zV-MAQ" secondAttribute="topMargin" constant="-4" id="gOK-7P-P8s"/>
+                                                <constraint firstItem="AX1-L6-FSg" firstAttribute="centerX" secondItem="0fY-zV-MAQ" secondAttribute="centerX" id="nFD-uR-qrw"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="ePS-WK-QGI">
                                         <rect key="frame" x="0.0" y="766" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ePS-WK-QGI" id="pRN-yO-0dp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #8 - White chips represent power." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unl-4d-O84">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unl-4d-O84">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="unl-4d-O84" firstAttribute="top" secondItem="pRN-yO-0dp" secondAttribute="topMargin" constant="-4" id="1ox-U3-tlQ"/>
+                                                <constraint firstItem="unl-4d-O84" firstAttribute="centerX" secondItem="pRN-yO-0dp" secondAttribute="centerX" id="Cy5-VB-zya"/>
+                                                <constraint firstItem="unl-4d-O84" firstAttribute="centerY" secondItem="pRN-yO-0dp" secondAttribute="centerY" id="FNO-Rd-O3i"/>
+                                                <constraint firstItem="unl-4d-O84" firstAttribute="leading" secondItem="pRN-yO-0dp" secondAttribute="leadingMargin" constant="7" id="TTb-7r-j5m"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="NyE-IM-Pce">
                                         <rect key="frame" x="0.0" y="866" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NyE-IM-Pce" id="e2Q-cb-jey">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #9 - Pearls represent prestige." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pc-Ni-Wag">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pc-Ni-Wag">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4pc-Ni-Wag" firstAttribute="top" secondItem="e2Q-cb-jey" secondAttribute="topMargin" constant="-4" id="9b9-38-T5N"/>
+                                                <constraint firstItem="4pc-Ni-Wag" firstAttribute="centerX" secondItem="e2Q-cb-jey" secondAttribute="centerX" id="FHo-kI-5E5"/>
+                                                <constraint firstItem="4pc-Ni-Wag" firstAttribute="leading" secondItem="e2Q-cb-jey" secondAttribute="leadingMargin" constant="7" id="csc-sB-Y1f"/>
+                                                <constraint firstItem="4pc-Ni-Wag" firstAttribute="centerY" secondItem="e2Q-cb-jey" secondAttribute="centerY" id="uYO-cQ-gC9"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="Wds-SS-fgS">
                                         <rect key="frame" x="0.0" y="966" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wds-SS-fgS" id="fdk-cX-iIq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #10 - At the end of the game, Team 1 will receive an extra $5 for every red chip they have." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUz-yV-7Yd">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUz-yV-7Yd">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fUz-yV-7Yd" firstAttribute="centerY" secondItem="fdk-cX-iIq" secondAttribute="centerY" id="9co-Vr-y7A"/>
+                                                <constraint firstItem="fUz-yV-7Yd" firstAttribute="top" secondItem="fdk-cX-iIq" secondAttribute="topMargin" constant="-4" id="N5n-dW-tKR"/>
+                                                <constraint firstItem="fUz-yV-7Yd" firstAttribute="leading" secondItem="fdk-cX-iIq" secondAttribute="leadingMargin" constant="7" id="eCG-91-oCT"/>
+                                                <constraint firstItem="fUz-yV-7Yd" firstAttribute="centerX" secondItem="fdk-cX-iIq" secondAttribute="centerX" id="eyo-ct-7qd"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="gqr-gp-mEe">
                                         <rect key="frame" x="0.0" y="1066" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gqr-gp-mEe" id="yrD-au-ZdX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #11 - At the end of the game, Team 4 will receive an extra $5 for every red chip they have." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqV-QT-4jn">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqV-QT-4jn">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lqV-QT-4jn" firstAttribute="centerX" secondItem="yrD-au-ZdX" secondAttribute="centerX" id="EeV-xS-sI5"/>
+                                                <constraint firstItem="lqV-QT-4jn" firstAttribute="top" secondItem="yrD-au-ZdX" secondAttribute="topMargin" constant="-4" id="Qbz-6r-ftG"/>
+                                                <constraint firstItem="lqV-QT-4jn" firstAttribute="leading" secondItem="yrD-au-ZdX" secondAttribute="leadingMargin" constant="7" id="Yqa-DK-cad"/>
+                                                <constraint firstItem="lqV-QT-4jn" firstAttribute="centerY" secondItem="yrD-au-ZdX" secondAttribute="centerY" id="vps-YB-QfM"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="MMH-HT-DIK">
                                         <rect key="frame" x="0.0" y="1166" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MMH-HT-DIK" id="VsO-uq-Gnm">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #12 - At the end of the game, Team 7 will receive an extra $5 for every red chip they have." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5e-AZ-sWe">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5e-AZ-sWe">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="y5e-AZ-sWe" firstAttribute="top" secondItem="VsO-uq-Gnm" secondAttribute="topMargin" constant="-4" id="bzG-v9-cbw"/>
+                                                <constraint firstItem="y5e-AZ-sWe" firstAttribute="centerY" secondItem="VsO-uq-Gnm" secondAttribute="centerY" id="iHk-Mh-3eX"/>
+                                                <constraint firstItem="y5e-AZ-sWe" firstAttribute="centerX" secondItem="VsO-uq-Gnm" secondAttribute="centerX" id="mbY-fB-6ko"/>
+                                                <constraint firstItem="y5e-AZ-sWe" firstAttribute="leading" secondItem="VsO-uq-Gnm" secondAttribute="leadingMargin" constant="7" id="pEz-yy-SSY"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="N04-oi-zWG">
                                         <rect key="frame" x="0.0" y="1266" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N04-oi-zWG" id="WvN-bR-Fxz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #13 - At the end of the game, Team 5 will receive an extra $5 for every red chip they have." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiD-5K-koH">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiD-5K-koH">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="HiD-5K-koH" firstAttribute="centerY" secondItem="WvN-bR-Fxz" secondAttribute="centerY" id="SxQ-xb-ffx"/>
+                                                <constraint firstItem="HiD-5K-koH" firstAttribute="top" secondItem="WvN-bR-Fxz" secondAttribute="topMargin" constant="-4" id="TH5-CH-MrS"/>
+                                                <constraint firstItem="HiD-5K-koH" firstAttribute="leading" secondItem="WvN-bR-Fxz" secondAttribute="leadingMargin" constant="7" id="Xbb-a5-fTy"/>
+                                                <constraint firstItem="HiD-5K-koH" firstAttribute="centerX" secondItem="WvN-bR-Fxz" secondAttribute="centerX" id="qyZ-tl-R7W"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="d7v-PA-fqV">
                                         <rect key="frame" x="0.0" y="1366" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d7v-PA-fqV" id="7Ap-UQ-dp4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #14 - At the end of the game, Team 2 will receive an extra $5 for every white chip they have." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qi-Vd-R7d">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qi-Vd-R7d">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1qi-Vd-R7d" firstAttribute="centerX" secondItem="7Ap-UQ-dp4" secondAttribute="centerX" id="2FN-dk-BZo"/>
+                                                <constraint firstItem="1qi-Vd-R7d" firstAttribute="top" secondItem="7Ap-UQ-dp4" secondAttribute="topMargin" constant="-4" id="Pln-rR-EjM"/>
+                                                <constraint firstItem="1qi-Vd-R7d" firstAttribute="centerY" secondItem="7Ap-UQ-dp4" secondAttribute="centerY" id="g7b-Dh-Gls"/>
+                                                <constraint firstItem="1qi-Vd-R7d" firstAttribute="leading" secondItem="7Ap-UQ-dp4" secondAttribute="leadingMargin" constant="7" id="twa-ht-UeM"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="UwF-gL-ekC">
                                         <rect key="frame" x="0.0" y="1466" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UwF-gL-ekC" id="P3d-of-ddY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #15 - At the end of the game, Team 5 will receive an extra $10 for every white chip they have." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjW-b2-LpD">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjW-b2-LpD">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OjW-b2-LpD" firstAttribute="leading" secondItem="P3d-of-ddY" secondAttribute="leadingMargin" constant="7" id="A3f-Yj-H3c"/>
+                                                <constraint firstItem="OjW-b2-LpD" firstAttribute="centerY" secondItem="P3d-of-ddY" secondAttribute="centerY" id="Od9-sl-bNh"/>
+                                                <constraint firstItem="OjW-b2-LpD" firstAttribute="centerX" secondItem="P3d-of-ddY" secondAttribute="centerX" id="WXV-Sd-GYw"/>
+                                                <constraint firstItem="OjW-b2-LpD" firstAttribute="top" secondItem="P3d-of-ddY" secondAttribute="topMargin" constant="-4" id="r9f-P9-r08"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="dhT-2V-ffq">
                                         <rect key="frame" x="0.0" y="1566" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dhT-2V-ffq" id="hll-Z8-r1L">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #16 - At the end of the game, Team 8 will receive an extra $10 for every white chip they have." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfv-U7-kve">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfv-U7-kve">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Yfv-U7-kve" firstAttribute="leading" secondItem="hll-Z8-r1L" secondAttribute="leadingMargin" constant="7" id="1gk-7L-JrU"/>
+                                                <constraint firstItem="Yfv-U7-kve" firstAttribute="centerX" secondItem="hll-Z8-r1L" secondAttribute="centerX" id="7ow-U4-PwR"/>
+                                                <constraint firstItem="Yfv-U7-kve" firstAttribute="top" secondItem="hll-Z8-r1L" secondAttribute="topMargin" constant="-4" id="efN-Ot-iiI"/>
+                                                <constraint firstItem="Yfv-U7-kve" firstAttribute="centerY" secondItem="hll-Z8-r1L" secondAttribute="centerY" id="lK0-El-0hS"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="eQD-ly-AIU">
                                         <rect key="frame" x="0.0" y="1666" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eQD-ly-AIU" id="GJv-aj-7Ge">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #17 - At the end of the game, Team 11 will receive an extra $10 for every white chip they have." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7P-UY-kt1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7P-UY-kt1">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="a7P-UY-kt1" firstAttribute="centerX" secondItem="GJv-aj-7Ge" secondAttribute="centerX" id="FFG-iq-yTL"/>
+                                                <constraint firstItem="a7P-UY-kt1" firstAttribute="top" secondItem="GJv-aj-7Ge" secondAttribute="topMargin" constant="-4" id="RXo-YL-yo1"/>
+                                                <constraint firstItem="a7P-UY-kt1" firstAttribute="leading" secondItem="GJv-aj-7Ge" secondAttribute="leadingMargin" constant="7" id="WVX-q1-mqc"/>
+                                                <constraint firstItem="a7P-UY-kt1" firstAttribute="centerY" secondItem="GJv-aj-7Ge" secondAttribute="centerY" id="lzV-p2-G1j"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="WCK-ZQ-Zyr">
                                         <rect key="frame" x="0.0" y="1766" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCK-ZQ-Zyr" id="fhf-HN-bK9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #18 - At the end of the game, Team 3 will receive an extra $10 for every blue chip they have." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8k-Y6-S5P">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8k-Y6-S5P">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="w8k-Y6-S5P" firstAttribute="leading" secondItem="fhf-HN-bK9" secondAttribute="leadingMargin" constant="7" id="9CG-rT-Nxx"/>
+                                                <constraint firstItem="w8k-Y6-S5P" firstAttribute="centerX" secondItem="fhf-HN-bK9" secondAttribute="centerX" id="F16-pk-7vm"/>
+                                                <constraint firstItem="w8k-Y6-S5P" firstAttribute="centerY" secondItem="fhf-HN-bK9" secondAttribute="centerY" id="fim-vN-GYx"/>
+                                                <constraint firstItem="w8k-Y6-S5P" firstAttribute="top" secondItem="fhf-HN-bK9" secondAttribute="topMargin" constant="-4" id="sjt-nW-xmG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="quW-LD-G8b">
                                         <rect key="frame" x="0.0" y="1866" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="quW-LD-G8b" id="3XK-Hg-1sN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #19 - At the end of the game, Team 6 will receive an extra $10 for every blue chip they have." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDD-aC-NOZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDD-aC-NOZ">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JDD-aC-NOZ" firstAttribute="top" secondItem="3XK-Hg-1sN" secondAttribute="topMargin" constant="-4" id="JbW-0N-jHr"/>
+                                                <constraint firstItem="JDD-aC-NOZ" firstAttribute="leading" secondItem="3XK-Hg-1sN" secondAttribute="leadingMargin" constant="7" id="QzT-Ut-Ae4"/>
+                                                <constraint firstItem="JDD-aC-NOZ" firstAttribute="centerY" secondItem="3XK-Hg-1sN" secondAttribute="centerY" id="ajY-e9-VlO"/>
+                                                <constraint firstItem="JDD-aC-NOZ" firstAttribute="centerX" secondItem="3XK-Hg-1sN" secondAttribute="centerX" id="kD7-C8-Dtn"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="5EH-mN-Nz2">
                                         <rect key="frame" x="0.0" y="1966" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5EH-mN-Nz2" id="IAp-Eb-UL4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #20 - At the end of the game, Team 9 will receive an extra $10 for every blue chip they have." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOG-Jo-62d">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOG-Jo-62d">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rOG-Jo-62d" firstAttribute="centerY" secondItem="IAp-Eb-UL4" secondAttribute="centerY" id="7P9-9I-eEg"/>
+                                                <constraint firstItem="rOG-Jo-62d" firstAttribute="centerX" secondItem="IAp-Eb-UL4" secondAttribute="centerX" id="CkH-pU-jJO"/>
+                                                <constraint firstItem="rOG-Jo-62d" firstAttribute="top" secondItem="IAp-Eb-UL4" secondAttribute="topMargin" constant="-4" id="i1U-Jt-elE"/>
+                                                <constraint firstItem="rOG-Jo-62d" firstAttribute="leading" secondItem="IAp-Eb-UL4" secondAttribute="leadingMargin" constant="7" id="xiS-q9-leI"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="VMx-CC-RTY">
                                         <rect key="frame" x="0.0" y="2066" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VMx-CC-RTY" id="CUe-FA-sEm">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #21 - At the end of the game, Team 12 will receive an extra $10 for every blue chip they have." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68F-bQ-SEP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68F-bQ-SEP">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="68F-bQ-SEP" firstAttribute="leading" secondItem="CUe-FA-sEm" secondAttribute="leadingMargin" constant="7" id="IqA-Z6-nkK"/>
+                                                <constraint firstItem="68F-bQ-SEP" firstAttribute="centerX" secondItem="CUe-FA-sEm" secondAttribute="centerX" id="UCC-O7-cSb"/>
+                                                <constraint firstItem="68F-bQ-SEP" firstAttribute="top" secondItem="CUe-FA-sEm" secondAttribute="topMargin" constant="-4" id="pdM-bo-mjz"/>
+                                                <constraint firstItem="68F-bQ-SEP" firstAttribute="centerY" secondItem="CUe-FA-sEm" secondAttribute="centerY" id="vGb-zY-ZqF"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="yt5-IW-vcF">
                                         <rect key="frame" x="0.0" y="2166" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yt5-IW-vcF" id="aPe-AR-IfS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #22 - If a team has no gems at the end of the game, they will receive a $200 bonus." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZY-2i-sGz">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZY-2i-sGz">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mZY-2i-sGz" firstAttribute="leading" secondItem="aPe-AR-IfS" secondAttribute="leadingMargin" constant="7" id="47N-oF-NM5"/>
+                                                <constraint firstItem="mZY-2i-sGz" firstAttribute="centerY" secondItem="aPe-AR-IfS" secondAttribute="centerY" id="Iur-m2-F6K"/>
+                                                <constraint firstItem="mZY-2i-sGz" firstAttribute="centerX" secondItem="aPe-AR-IfS" secondAttribute="centerX" id="c5S-7u-N4t"/>
+                                                <constraint firstItem="mZY-2i-sGz" firstAttribute="top" secondItem="aPe-AR-IfS" secondAttribute="topMargin" constant="-4" id="xl1-vo-jg6"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="rTW-un-xWR">
                                         <rect key="frame" x="0.0" y="2266" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rTW-un-xWR" id="XTe-BO-yeF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #23 - If a team has over $200 cash at the end of the game, they will receive a $100 bonus." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xn-eA-Vyw">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xn-eA-Vyw">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2Xn-eA-Vyw" firstAttribute="leading" secondItem="XTe-BO-yeF" secondAttribute="leadingMargin" constant="7" id="3kd-5K-6cI"/>
+                                                <constraint firstItem="2Xn-eA-Vyw" firstAttribute="centerX" secondItem="XTe-BO-yeF" secondAttribute="centerX" id="LVR-hY-pDX"/>
+                                                <constraint firstItem="2Xn-eA-Vyw" firstAttribute="centerY" secondItem="XTe-BO-yeF" secondAttribute="centerY" id="OBK-nI-jsi"/>
+                                                <constraint firstItem="2Xn-eA-Vyw" firstAttribute="top" secondItem="XTe-BO-yeF" secondAttribute="topMargin" constant="-4" id="Reh-Il-zop"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="yGD-Qi-HCw">
                                         <rect key="frame" x="0.0" y="2366" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yGD-Qi-HCw" id="mFF-IR-xkt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #24 - If a team does not have at least one poker chip of each color at the end of the game, they will be penalized $200." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dR-Q8-N4R">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dR-Q8-N4R">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8dR-Q8-N4R" firstAttribute="centerY" secondItem="mFF-IR-xkt" secondAttribute="centerY" id="FI8-83-ZGT"/>
+                                                <constraint firstItem="8dR-Q8-N4R" firstAttribute="leading" secondItem="mFF-IR-xkt" secondAttribute="leadingMargin" constant="7" id="Yzn-38-oh4"/>
+                                                <constraint firstItem="8dR-Q8-N4R" firstAttribute="centerX" secondItem="mFF-IR-xkt" secondAttribute="centerX" id="hFV-Gv-K9a"/>
+                                                <constraint firstItem="8dR-Q8-N4R" firstAttribute="top" secondItem="mFF-IR-xkt" secondAttribute="topMargin" constant="-4" id="lSS-sC-cav"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="ilh-nA-Oiu">
                                         <rect key="frame" x="0.0" y="2466" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ilh-nA-Oiu" id="ui5-uA-lMr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #25 - Red chips are worth $1 when the game begins." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flc-tm-aIP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flc-tm-aIP">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="flc-tm-aIP" firstAttribute="leading" secondItem="ui5-uA-lMr" secondAttribute="leadingMargin" constant="7" id="XvJ-Es-gv5"/>
+                                                <constraint firstItem="flc-tm-aIP" firstAttribute="top" secondItem="ui5-uA-lMr" secondAttribute="topMargin" constant="-4" id="eif-8P-UQW"/>
+                                                <constraint firstItem="flc-tm-aIP" firstAttribute="centerX" secondItem="ui5-uA-lMr" secondAttribute="centerX" id="xiu-we-558"/>
+                                                <constraint firstItem="flc-tm-aIP" firstAttribute="centerY" secondItem="ui5-uA-lMr" secondAttribute="centerY" id="ytV-VP-jng"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="5ku-fR-fix">
                                         <rect key="frame" x="0.0" y="2566" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5ku-fR-fix" id="IIa-6I-EHX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #26 - White chips are worth $2 when the game begins." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwr-R6-56u">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwr-R6-56u">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hwr-R6-56u" firstAttribute="centerY" secondItem="IIa-6I-EHX" secondAttribute="centerY" id="IIb-wy-nf0"/>
+                                                <constraint firstItem="hwr-R6-56u" firstAttribute="centerX" secondItem="IIa-6I-EHX" secondAttribute="centerX" id="VeE-oH-07H"/>
+                                                <constraint firstItem="hwr-R6-56u" firstAttribute="top" secondItem="IIa-6I-EHX" secondAttribute="topMargin" constant="-4" id="ba0-Jq-tkP"/>
+                                                <constraint firstItem="hwr-R6-56u" firstAttribute="leading" secondItem="IIa-6I-EHX" secondAttribute="leadingMargin" constant="7" id="dIf-Ut-VJG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="cLK-aR-Ojn">
                                         <rect key="frame" x="0.0" y="2666" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cLK-aR-Ojn" id="huf-Vq-WV3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #27 - Blue chips are worth $5 when the game begins." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fw-M6-0Ji">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fw-M6-0Ji">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7Fw-M6-0Ji" firstAttribute="top" secondItem="huf-Vq-WV3" secondAttribute="topMargin" constant="-4" id="9AO-Yx-fiK"/>
+                                                <constraint firstItem="7Fw-M6-0Ji" firstAttribute="leading" secondItem="huf-Vq-WV3" secondAttribute="leadingMargin" constant="7" id="Zja-6Z-Ptt"/>
+                                                <constraint firstItem="7Fw-M6-0Ji" firstAttribute="centerX" secondItem="huf-Vq-WV3" secondAttribute="centerX" id="eT5-eQ-os1"/>
+                                                <constraint firstItem="7Fw-M6-0Ji" firstAttribute="centerY" secondItem="huf-Vq-WV3" secondAttribute="centerY" id="wXp-01-p5a"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="O0s-Lz-sUx">
                                         <rect key="frame" x="0.0" y="2766" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O0s-Lz-sUx" id="r34-Cs-Mkz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #28 - Onyx are worth $5 when the game begins." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iL4-st-mXC">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iL4-st-mXC">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iL4-st-mXC" firstAttribute="centerX" secondItem="r34-Cs-Mkz" secondAttribute="centerX" id="AIa-1n-V9Y"/>
+                                                <constraint firstItem="iL4-st-mXC" firstAttribute="centerY" secondItem="r34-Cs-Mkz" secondAttribute="centerY" id="emV-mm-LOg"/>
+                                                <constraint firstItem="iL4-st-mXC" firstAttribute="leading" secondItem="r34-Cs-Mkz" secondAttribute="leadingMargin" constant="7" id="kRU-SF-PBr"/>
+                                                <constraint firstItem="iL4-st-mXC" firstAttribute="top" secondItem="r34-Cs-Mkz" secondAttribute="topMargin" constant="-4" id="ob9-mI-hSI"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="0xu-le-mS5">
                                         <rect key="frame" x="0.0" y="2866" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0xu-le-mS5" id="kRn-wf-Ru6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #29 - Pearls are worth $10 when the game begins." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRV-Dy-xxO">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRV-Dy-xxO">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qRV-Dy-xxO" firstAttribute="centerY" secondItem="kRn-wf-Ru6" secondAttribute="centerY" id="7YC-0j-oOE"/>
+                                                <constraint firstItem="qRV-Dy-xxO" firstAttribute="top" secondItem="kRn-wf-Ru6" secondAttribute="topMargin" constant="-4" id="iIg-I6-dFK"/>
+                                                <constraint firstItem="qRV-Dy-xxO" firstAttribute="centerX" secondItem="kRn-wf-Ru6" secondAttribute="centerX" id="rXm-9H-DBO"/>
+                                                <constraint firstItem="qRV-Dy-xxO" firstAttribute="leading" secondItem="kRn-wf-Ru6" secondAttribute="leadingMargin" constant="7" id="yDX-ja-a1O"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="YZG-L2-wc5">
                                         <rect key="frame" x="0.0" y="2966" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YZG-L2-wc5" id="kxi-KM-k6v">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #30 - Emeralds are worth $25 when the game begins." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9F-Q7-S7e">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9F-Q7-S7e">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="r9F-Q7-S7e" firstAttribute="centerY" secondItem="kxi-KM-k6v" secondAttribute="centerY" id="8OK-nJ-EI3"/>
+                                                <constraint firstItem="r9F-Q7-S7e" firstAttribute="centerX" secondItem="kxi-KM-k6v" secondAttribute="centerX" id="tbm-oF-miT"/>
+                                                <constraint firstItem="r9F-Q7-S7e" firstAttribute="top" secondItem="kxi-KM-k6v" secondAttribute="topMargin" constant="-4" id="uPp-Wo-0QH"/>
+                                                <constraint firstItem="r9F-Q7-S7e" firstAttribute="leading" secondItem="kxi-KM-k6v" secondAttribute="leadingMargin" constant="7" id="vp5-N3-qVO"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="CaT-q0-MzH">
                                         <rect key="frame" x="0.0" y="3066" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CaT-q0-MzH" id="NBl-EI-AM4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #31 - Red chips are worth $10 when the game ends." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fId-7C-jzD">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fId-7C-jzD">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fId-7C-jzD" firstAttribute="leading" secondItem="NBl-EI-AM4" secondAttribute="leadingMargin" constant="7" id="OOT-D7-NPU"/>
+                                                <constraint firstItem="fId-7C-jzD" firstAttribute="top" secondItem="NBl-EI-AM4" secondAttribute="topMargin" constant="-4" id="OiC-mk-Tue"/>
+                                                <constraint firstItem="fId-7C-jzD" firstAttribute="centerY" secondItem="NBl-EI-AM4" secondAttribute="centerY" id="c05-YW-nKM"/>
+                                                <constraint firstItem="fId-7C-jzD" firstAttribute="centerX" secondItem="NBl-EI-AM4" secondAttribute="centerX" id="hcY-Q6-yMX"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="dw5-Nx-aMg">
                                         <rect key="frame" x="0.0" y="3166" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dw5-Nx-aMg" id="gBE-SQ-yGE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #32 - White chips are worth $5 more when the game ends." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smu-fH-Ytw">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smu-fH-Ytw">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="smu-fH-Ytw" firstAttribute="centerY" secondItem="gBE-SQ-yGE" secondAttribute="centerY" id="41s-Ji-5GB"/>
+                                                <constraint firstItem="smu-fH-Ytw" firstAttribute="centerX" secondItem="gBE-SQ-yGE" secondAttribute="centerX" id="VrV-Ny-ATd"/>
+                                                <constraint firstItem="smu-fH-Ytw" firstAttribute="leading" secondItem="gBE-SQ-yGE" secondAttribute="leadingMargin" constant="7" id="d9g-r8-lkO"/>
+                                                <constraint firstItem="smu-fH-Ytw" firstAttribute="top" secondItem="gBE-SQ-yGE" secondAttribute="topMargin" constant="-4" id="sJR-Hu-xhF"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="Gl7-G3-QUw">
                                         <rect key="frame" x="0.0" y="3266" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gl7-G3-QUw" id="T92-fG-hZs">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #33 - Blue chips are worth $1 when the game ends." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGV-Vd-gsK">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGV-Vd-gsK">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mGV-Vd-gsK" firstAttribute="leading" secondItem="T92-fG-hZs" secondAttribute="leadingMargin" constant="7" id="4fK-g4-wWS"/>
+                                                <constraint firstItem="mGV-Vd-gsK" firstAttribute="centerY" secondItem="T92-fG-hZs" secondAttribute="centerY" id="6rl-J7-jxG"/>
+                                                <constraint firstItem="mGV-Vd-gsK" firstAttribute="centerX" secondItem="T92-fG-hZs" secondAttribute="centerX" id="6xN-a8-35e"/>
+                                                <constraint firstItem="mGV-Vd-gsK" firstAttribute="top" secondItem="T92-fG-hZs" secondAttribute="topMargin" constant="-4" id="lE1-hz-NFu"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="ekt-Wg-N4o">
                                         <rect key="frame" x="0.0" y="3366" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ekt-Wg-N4o" id="2J3-Ju-JEa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #34 - Onyx is worth $15 when the game ends." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Oc-CV-B9g">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Oc-CV-B9g">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1Oc-CV-B9g" firstAttribute="top" secondItem="2J3-Ju-JEa" secondAttribute="topMargin" constant="-4" id="4nY-29-7Ef"/>
+                                                <constraint firstItem="1Oc-CV-B9g" firstAttribute="leading" secondItem="2J3-Ju-JEa" secondAttribute="leadingMargin" constant="7" id="5y8-ER-9tR"/>
+                                                <constraint firstItem="1Oc-CV-B9g" firstAttribute="centerY" secondItem="2J3-Ju-JEa" secondAttribute="centerY" id="Iji-ik-REW"/>
+                                                <constraint firstItem="1Oc-CV-B9g" firstAttribute="centerX" secondItem="2J3-Ju-JEa" secondAttribute="centerX" id="XXf-TF-Lsk"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="nTZ-IK-HI6">
                                         <rect key="frame" x="0.0" y="3466" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nTZ-IK-HI6" id="tCL-dL-gRo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #35 - Pearls are worth $5 when the game ends." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUw-KS-HG5">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUw-KS-HG5">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pUw-KS-HG5" firstAttribute="centerX" secondItem="tCL-dL-gRo" secondAttribute="centerX" id="22V-6O-Qrh"/>
+                                                <constraint firstItem="pUw-KS-HG5" firstAttribute="leading" secondItem="tCL-dL-gRo" secondAttribute="leadingMargin" constant="7" id="9S0-XP-L3N"/>
+                                                <constraint firstItem="pUw-KS-HG5" firstAttribute="centerY" secondItem="tCL-dL-gRo" secondAttribute="centerY" id="EnK-e8-2BE"/>
+                                                <constraint firstItem="pUw-KS-HG5" firstAttribute="top" secondItem="tCL-dL-gRo" secondAttribute="topMargin" constant="-4" id="nza-V6-ljN"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="BCv-tP-usR">
                                         <rect key="frame" x="0.0" y="3566" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BCv-tP-usR" id="XQ1-gF-H1g">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clue #36 - Emeralds are worth #10 when the game ends." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKi-PD-HZz">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKi-PD-HZz">
                                                     <rect key="frame" x="15" y="4" width="345" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mKi-PD-HZz" firstAttribute="centerX" secondItem="XQ1-gF-H1g" secondAttribute="centerX" id="aew-TY-QPt"/>
+                                                <constraint firstItem="mKi-PD-HZz" firstAttribute="top" secondItem="XQ1-gF-H1g" secondAttribute="topMargin" constant="-4" id="hAJ-Ua-1EH"/>
+                                                <constraint firstItem="mKi-PD-HZz" firstAttribute="leading" secondItem="XQ1-gF-H1g" secondAttribute="leadingMargin" constant="7" id="xaa-6u-LnO"/>
+                                                <constraint firstItem="mKi-PD-HZz" firstAttribute="centerY" secondItem="XQ1-gF-H1g" secondAttribute="centerY" id="ymR-N1-Sli"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -1197,7 +1384,7 @@
                                         <rect key="frame" x="0.0" y="225.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BBd-Ia-Yby" id="tFC-AL-g5F">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xge-XB-SYe">
@@ -1237,7 +1424,7 @@
                                         <rect key="frame" x="0.0" y="269.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3zC-fY-Fvp" id="enb-J6-USz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXv-Gx-H8G">
@@ -1277,7 +1464,7 @@
                                         <rect key="frame" x="0.0" y="313.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4V0-Ci-fgt" id="V5K-5s-cJO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6c-VA-LZz">
@@ -1321,7 +1508,7 @@
                                         <rect key="frame" x="0.0" y="413.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KZq-ad-sGZ" id="4rG-hj-WTo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZe-a0-VK2">
@@ -1361,7 +1548,7 @@
                                         <rect key="frame" x="0.0" y="457.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Ka-HJ-DNm" id="YY9-Qk-d5D">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXd-ha-NWW">
@@ -1401,7 +1588,7 @@
                                         <rect key="frame" x="0.0" y="501.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xY9-kC-pIg" id="yde-5r-wob">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cX0-In-x7b">
@@ -1445,7 +1632,7 @@
                                         <rect key="frame" x="0.0" y="601.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mqy-Du-hUr" id="k07-E4-crJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbL-x8-Oqs">
@@ -1489,7 +1676,7 @@
                                         <rect key="frame" x="0.0" y="701.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bcz-W9-LuZ" id="5zf-Rg-37W">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the clues that you would like to trade:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PqB-s4-rl4">
@@ -1511,7 +1698,7 @@
                                         <rect key="frame" x="0.0" y="745.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ilk-JU-ecB" id="mBW-EQ-kNo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue #" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WEP-yo-acd">
@@ -1561,7 +1748,7 @@
                                         <rect key="frame" x="0.0" y="789.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YAJ-LD-pEx" id="6yK-Rc-5A1">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9E-uw-RRf">

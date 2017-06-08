@@ -46,16 +46,16 @@ class ClientTradingGame {
         }
     }
     
-    open func read() -> String? {
-        guard let byteResponse = client.read(1024 * 10) else {
-            return nil
+    open func read() -> [String?] {
+        var response = [String?]()
+        
+        if let byteResponse = client.read(1024 * 10) {
+            if let resp = String(bytes: byteResponse, encoding: .utf8) {
+                response = decodeResponse(response: resp)
+            }
         }
         
-        guard let response = String(bytes: byteResponse, encoding: .utf8) else {
-            return nil
-        }
-        
-        return decodeResponse(response: response)
+        return response
     }
     
     private func prepareMessage(message: String) -> [Byte] {
@@ -68,18 +68,28 @@ class ClientTradingGame {
         return buffer
     }
     
-    private func decodeResponse(response: String) -> String? {
-        let responseArr = response.components(separatedBy: ":")
-        let event = responseArr[0]
-        let data = responseArr[1]
+    private func decodeResponse(response: String) -> [String?] {
+        let buffer = response.components(separatedBy: "\r\n")
         
-        if event  == "ITEMS" {
-            addInventory(items: data.components(separatedBy: ";"))
-        } else if event == "TRANSACTION" {
-            processTransaction(data.components(separatedBy: ";"))
+        var allDataReceived = [String?]()
+        
+        for possibleEvent in buffer {
+            if possibleEvent != "" {
+                let responseArr = possibleEvent.components(separatedBy: ":")
+                let event = responseArr[0]
+                let data = responseArr[1]
+            
+                if event  == "ITEMS" {
+                    addInventory(items: data.components(separatedBy: ";"))
+                } else if event == "TRANSACTION" {
+                    processTransaction(data.components(separatedBy: ";"))
+                }
+            
+                allDataReceived.append(data)
+            }
         }
         
-        return data
+        return allDataReceived
     }
     
     private func addInventory(items: [String]) {

@@ -11,6 +11,18 @@ import UIKit
 class CluesTableViewController: UITableViewController {
     var client: ClientTradingGame!
     
+    var labels = [UILabel]()
+    @IBOutlet weak var clue1Label: UILabel!
+    @IBOutlet weak var clue2Label: UILabel!
+    @IBOutlet weak var clue3Label: UILabel!
+    @IBOutlet weak var clue4Label: UILabel!
+    @IBOutlet weak var clue5Label: UILabel!
+    @IBOutlet weak var clue6Label: UILabel!
+    @IBOutlet weak var clue7Label: UILabel!
+    @IBOutlet weak var clue8Label: UILabel!
+    @IBOutlet weak var clue9Label: UILabel!
+    @IBOutlet weak var clue10Label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +34,21 @@ class CluesTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        labels.append(clue1Label)
+        labels.append(clue2Label)
+        labels.append(clue3Label)
+        labels.append(clue4Label)
+        labels.append(clue5Label)
+        labels.append(clue6Label)
+        labels.append(clue7Label)
+        labels.append(clue8Label)
+        labels.append(clue9Label)
+        labels.append(clue10Label)
+        
+        for index in 0..<client.clues.count {
+            labels[index].text = client.clues[index]
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,7 +65,7 @@ class CluesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 36
+        return 10
     }
 
     /*

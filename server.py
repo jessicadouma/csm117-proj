@@ -11,9 +11,10 @@ class TradingGame(LineReceiver):
         self.state = "GETNAME"
 
     def connectionMade(self):
-        self.sendLine("OUTPUT:Choose a team name.")
+        print "Client connected..."
 
     def connectionLost(self, reason):
+        print "Client {0} disconnected...".format(self.name)
         self.tb.removeTeam(self.name)
 
     def lineReceived(self, line):
@@ -26,22 +27,29 @@ class TradingGame(LineReceiver):
 
     def handle_GETNAME(self, name): 
         if self.tb.addTeam(name, self) is False:
-            self.sendLine("OUTPUT:Name taken, please choose another.")
+            count = 1 # We know there is one team w/ same name
+
+            for teamname in self.tb.teams.keys():
+                if teamname.startswith(name): # Count all clients w/ same prefix
+                    count += 1
+
+            # Append count to name
+            name = name + str(count)
+            self.tb.addTeam(name, self)
             return
         
-        self.sendLine("OUTPUT:Welcome, %s!" % (name,))
         self.name = name
+        print "Welcome {0}!".format(name)
 
         # Send each newly connected team their list of items
         itemMsg = "ITEMS:" + self.tb.itemList(self.tb.numTeams - 1)
         self.sendLine(itemMsg)
 
         if self.tb.allTeamsConnected():
-            self.state = "ROUNDSTART"
-
-            allConnectedMsg = "ROUNDSTART:" + str(self.tb.currentRound+1) + "," + str(self.tb.roundTime)
+            allConnectedMsg = "ROUNDSTART:" + str(self.tb.currentRound+1) + ";" + str(self.tb.roundTime)
             
             for (name, team) in self.tb.teams.iteritems():
+                team.state = "ROUNDSTART"
                 team.sendLine(allConnectedMsg)
 
     def handle_ROUNDSTART(self, msg):
@@ -49,9 +57,21 @@ class TradingGame(LineReceiver):
 
         event = data[0]
 
+        if event == "TRANSACTION":
+            transaction = data[1].split(';')
+
+            client = transaction[0]
+          
+            infocards = self.tb.replaceIndexWithInfoCards(transaction[8:])
+            transaction[8:] = infocards
+
+            newMsg = ";".join(transaction)
+
+            self.tb.teams[client].sendLine(event + ":" + newMsg)
+
 class TradingGameFactory(Factory):
     def __init__(self):
-        maxTeams = 2
+        maxTeams = 3
         maxRounds = 4
         self.tb = TradingBrain(maxTeams, maxRounds)
 

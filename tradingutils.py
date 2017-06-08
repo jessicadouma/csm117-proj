@@ -23,7 +23,7 @@ def build_itemlist():
     # Replace info card indices
     # with the info card
     for unparsed_item in unparsed_items:
-        unparsed_list = unparsed_item.split(',')
+        unparsed_list = unparsed_item.split(';')
 
         infoCard1 = int(unparsed_list[infoCardCol1]) - 1
         infoCard2 = int(unparsed_list[infoCardCol2]) - 1
@@ -33,6 +33,6 @@ def build_itemlist():
         unparsed_list[infoCardCol2] = infocards[infoCard2].strip('\n')
         unparsed_list[infoCardCol3] = infocards[infoCard3].strip('\n')
 
-        items.append(",".join(unparsed_list))
+        items.append(";".join(unparsed_list))
 
     return items

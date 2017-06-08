@@ -45,7 +45,9 @@ class CluesTableViewController: UITableViewController {
         labels.append(clue8Label)
         labels.append(clue9Label)
         labels.append(clue10Label)
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         for index in 0..<client.clues.count {
             labels[index].text = client.clues[index]
         }

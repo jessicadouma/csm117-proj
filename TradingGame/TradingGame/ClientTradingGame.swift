@@ -57,6 +57,7 @@ class ClientTradingGame {
         if let byteResponse = client.read(1024 * 10) {
             if let resp = String(bytes: byteResponse, encoding: .utf8) {
                 response = decodeResponse(response: resp)
+                print(response)
             }
         }
         

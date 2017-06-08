@@ -102,32 +102,36 @@ class ClientTradingGame {
         clues.append(items[9])
     }
     
+    open func chipTransaction(amount: Int, from chip: String) {
+        if let value = chips[chip] {
+            chips[chip] = value + amount
+        }
+    }
+    
+    open func gemTransaction(amount: Int, from gem: String) {
+        if let value = gems[gem] {
+            gems[gem] = value + amount
+        }
+    }
+    
+    open func moneyTransaction(amount: Int) {
+        let newAmount = purse + amount
+        
+        if newAmount >= 0 {
+            purse = newAmount
+        }
+    }
+    
     private func processTransaction(_ transaction: [String]) {
-        if let chipAmount = chips["Red"] {
-            chips["Red"] = chipAmount + Int(transaction[2])!
-        }
+        chipTransaction(amount: Int(transaction[4])!, from: "Red")
+        chipTransaction(amount: Int(transaction[5])!, from: "White")
+        chipTransaction(amount: Int(transaction[6])!, from: "Blue")
         
-        if let chipAmount = chips["White"] {
-            chips["White"] = chipAmount + Int(transaction[3])!
-        }
+        gemTransaction(amount: Int(transaction[7])!, from: "Onyx")
+        gemTransaction(amount: Int(transaction[8])!, from: "Emeralds")
+        gemTransaction(amount: Int(transaction[9])!, from: "Pearls")
         
-        if let chipAmount = chips["Blue"] {
-            chips["Blue"] = chipAmount + Int(transaction[4])!
-        }
-        
-        if let gemAmount = gems["Onyx"] {
-            gems["Onyx"] = gemAmount + Int(transaction[5])!
-        }
-        
-        if let gemAmount = gems["Emeralds"] {
-            gems["Emeralds"] = gemAmount + Int(transaction[6])!
-        }
-        
-        if let gemAmount = gems["Pearls"] {
-            gems["Pearls"] = gemAmount + Int(transaction[7])!
-        }
-        
-        purse += Int(transaction[8])!
+        moneyTransaction(amount: Int(transaction[8])!)
         
         if transaction[9] != "0" {
             clues.append(transaction[9])

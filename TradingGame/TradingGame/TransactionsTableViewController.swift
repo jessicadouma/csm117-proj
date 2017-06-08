@@ -137,20 +137,37 @@ class TransactionsTableViewController: UITableViewController, UITextFieldDelegat
         guard let redChipValue = redValue.text else { return nil }
         transaction.append(redChipValue)
         
+        client.chipTransaction(amount: -Int(redChipValue)!, from: "Red")
+        
         guard let whiteChipValue = whiteValue.text else { return nil }
         transaction.append(whiteChipValue)
+        
+        client.chipTransaction(amount: -Int(whiteChipValue)!, from: "White")
         
         guard let blueChipValue = blueValue.text else { return nil }
         transaction.append(blueChipValue)
         
+        client.chipTransaction(amount: -Int(blueChipValue)!, from: "Blue")
+        
         guard let onyxGemValue = onyxValue.text else { return nil }
         transaction.append(onyxGemValue)
+        
+        client.gemTransaction(amount: -Int(onyxGemValue)!, from: "Onyx")
         
         guard let emeraldGemValue = emeraldValue.text else { return nil }
         transaction.append(emeraldGemValue)
         
+        client.gemTransaction(amount: -Int(emeraldGemValue)!, from: "Emeralds")
+        
         guard let pearlGemValue = pearlValue.text else { return nil }
         transaction.append(pearlGemValue)
+        
+        client.gemTransaction(amount: -Int(pearlGemValue)!, from: "Pearls")
+        
+        guard let money = moneyValue.text else { return nil }
+        transaction.append(money)
+        
+        client.moneyTransaction(amount: -Int(money)!)
         
         guard let clue1 = clue1.text else { return nil }
         if clue1 != "" {
